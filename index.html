@@ -1,0 +1,113 @@
+	<html>  <head>
+	<script>
+        var activeResources = [""];
+
+		function changeOpacity(SVGElement, newOpacity)
+		{
+			currentStyle = SVGElement.getAttributeNS(null, "style");
+			if(currentStyle != null){
+				currentStyle = currentStyle.replace(/;(\s|)Opacity:[^;]+(;|$)/i, ";");
+				currentStyle = currentStyle.replace(/^(\s|)Opacity:[^;]+(;|$)/i, "");
+				currentStyle = currentStyle.replace(/;(\s|)+$/i,"")
+				SVGElement.setAttributeNS(null, "style",  currentStyle + ";Opacity:"+newOpacity);
+			} else{
+				SVGElement.setAttributeNS(null, "style",  "Opacity:"+newOpacity);
+			}
+		}
+		
+		function changeFill(SVGElement, newFill)
+		{
+			currentStyle = SVGElement.getAttributeNS(null, "style");
+			if(currentStyle != null){
+				currentStyle = currentStyle.replace(/;(\s|)Fill:[^;]+(;|$)/i, ";");
+				currentStyle = currentStyle.replace(/^(\s|)Fill:[^;]+(;|$)/i, "");
+				currentStyle = currentStyle.replace(/;(\s|)+$/i,"")
+				SVGElement.setAttributeNS(null, "style",  currentStyle + ";Fill:"+newFill);
+			} else{
+				SVGElement.setAttributeNS(null, "style",  "Fill:"+newFill);
+			}
+			SVGElement.setAttributeNS(null, "style",  currentStyle + ";Fill:"+newFill);
+		}
+		
+    var resetStyles = function (){
+            var svg = document.getElementById("map-svg"); 
+            var svgDoc = svg.contentDocument;
+            var all = svgDoc.getElementsByTagName("*");
+            for(var i=0; i < all.length; i++) {
+                if (all[i].id != null && all[i].id.substring(0, 8) == "Resource") {
+					changeOpacity(all[i],.7);
+					changeFill(all[i],"#aaaaaa");
+                    all[i].addEventListener("mouseenter", mouseEnter);
+                    all[i].addEventListener("mouseleave", mouseLeave);
+                }
+            }
+    }
+
+    var mouseEnter = function () {
+        changeOpacity(this,"1");
+    }
+
+    var mouseLeave = function () {
+        changeOpacity(this,".7");
+    }
+
+    function updateMap()
+    {
+        resetStyles();
+    }
+
+    function mapLoaded() {
+        resetStyles();
+		
+        var svg = document.getElementById("map-svg"); 
+        var svgDoc = svg.contentDocument;
+        var all = svgDoc.getElementsByTagName("*");
+
+        for (var i = 0; i < all.length; i++) {
+            if (all[i].id != null && all[i].id.substring(0, 8) == "Resource"){
+				changeFill(all[i],"#aaaaaa");
+				changeOpacity(all[i],".7");
+			}
+			
+            for(var j=0;j<activeResources.length;j++)
+            {
+                if (all[i].id != null && all[i].id.replace("Resource", "") == activeResources[j]){
+					changeFill(all[i],"#00ff00");
+					changeOpacity(all[i],".7")
+				}
+            }
+        }
+    }
+
+    function getRooms() {
+		mapLoaded();
+	
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var SerReturn = xmlhttp.responseText;
+                SerReturn = SerReturn.replace(/ |\\|\/|\(|\)/g, '_');
+                activeResources = JSON.parse(SerReturn);
+                document.getElementById("txtHint").innerHTML = SerReturn;
+                mapLoaded();
+            }
+        }
+        xmlhttp.open("GET", "phpTest.php", true);
+        xmlhttp.send();
+    }
+    </script>
+<title>Live Campus Map WIP</title></head>
+  <body>
+    <h2>Live Campus Map WIP</h2>
+    <div class="page-content">
+        <div><object id="map-svg" width="1200" height="700" type="image/svg+xml" data="/Map.svg" onload="getRooms()"></object></div>
+        <div id="txtHint"><b>Raw Room string</b></div>
+        </div>
+  </body>
+</html>
