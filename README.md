@@ -25,6 +25,10 @@ Using a SVG map we are able to change the color of which rooms / buildings on ca
 - Segment featured based on security level (Facilities & Tech & IT, Upper Management, Admins, Volunteers 
 
 ## Ideas ##
+- Pull in data from Planning Center
+  - Which tech should be where
+  - What resources are being used where
+  - Where is the tech right now? (From WiFi data maybe?)
 - Pull in HVAC data and display info per room
 - Pull in WiFi info from PRTG
   - Number of connected people in a room
