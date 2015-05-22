@@ -13,7 +13,8 @@ Using a SVG map we are able to change the color of which rooms / buildings on ca
 - update DB regularly
 - make code more pretty
 - move login info to config file
-- 
+
+
 **UI stuff:**
 - ~~Slider to select which part of a 24 hour day to display~~
 - In an idle state zoom between buildings to provide more detail as to what is happening in that section of the campus
