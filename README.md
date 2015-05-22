@@ -27,7 +27,12 @@ Using a SVG map we are able to change the color of which rooms / buildings on ca
 ## Ideas ##
 - Pull in HVAC data and display info per room
 - Pull in WiFi info from PRTG
+  - Number of connected people in a room
+  - When zoomed in number of connected people to AP in the room
+  - Toggle to change the color of the room based on number of connected users in a room
+- RMon data on amount of bandwidth being used in a room
+-   
 - Pull in 911 call info from Mitel
-- - Build list of extensions and sort them by building
-- - Query the Mitel DB
-- - Display where the call came from
+  - Build list of extensions and sort them by building
+  - Query the Mitel DB
+  - Display where the call came from
