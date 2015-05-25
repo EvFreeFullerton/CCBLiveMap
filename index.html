@@ -1,7 +1,22 @@
 	<html>  <head>
+		<style>
+		#time{
+			float: left;
+			clear: left;
+			width: 80%;
+			margin: 20px;
+		}
+		#time .ui-slider-range { background: #729fcf; }
+		#time .ui-slider-handle { border-color: #729fcf; }
+	</style>
+	<link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.css">
+	<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+	<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	<script src="jquery.ui.touch-punch.min.js"></script>
 	<script>
-        var activeResources = [""];
-
+        var events;
+		var currentTime;
+		
 		function changeOpacity(SVGElement, newOpacity)
 		{
 			currentStyle = SVGElement.getAttributeNS(null, "style");
@@ -29,85 +44,159 @@
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";Fill:"+newFill);
 		}
 		
-    var resetStyles = function (){
+		function xinspect(o,i){
+			if(typeof i=='undefined')i='';
+			if(i.length>50)return '[MAX ITERATIONS]';
+			var r=[];
+			for(var p in o){
+				var t=typeof o[p];
+				r.push(i+'"'+p+'" ('+t+') => '+(t=='object' ? 'object:'+xinspect(o[p],i+'  ') : o[p]+''));
+			}
+			return r.join(i+'\n');
+		}
+		
+		function currentSecondsSinceEpoch(){
+			return Number(new Date())/1000;
+		}
+		
+		function fixObjectDates(element, index, array) {
+			array[index].startTime = Number(element.startTime);
+			array[index].endTime = Number(element.endTime);
+			array[index].resources = JSON.parse(array[index].resources.replace(/ |\\|\/|\(|\)/g, '_'));
+		}
+		
+		var resetStyles = function (){
             var svg = document.getElementById("map-svg"); 
             var svgDoc = svg.contentDocument;
             var all = svgDoc.getElementsByTagName("*");
             for(var i=0; i < all.length; i++) {
                 if (all[i].id != null && all[i].id.substring(0, 8) == "Resource") {
-					changeOpacity(all[i],.7);
+					changeOpacity(all[i],1);
 					changeFill(all[i],"#aaaaaa");
-                    all[i].addEventListener("mouseenter", mouseEnter);
+					all[i].addEventListener("mouseenter", mouseEnter);
                     all[i].addEventListener("mouseleave", mouseLeave);
                 }
             }
-    }
-
-    var mouseEnter = function () {
-        changeOpacity(this,"1");
-    }
-
-    var mouseLeave = function () {
-        changeOpacity(this,".7");
-    }
-
-    function updateMap()
-    {
-        resetStyles();
-    }
-
-    function mapLoaded() {
-        resetStyles();
+		}	
 		
-        var svg = document.getElementById("map-svg"); 
-        var svgDoc = svg.contentDocument;
-        var all = svgDoc.getElementsByTagName("*");
+		var mouseEnter = function () {
+			document.getElementById("eventTitleLabel").innerHTML = this.getAttributeNS(null, "customTooltip");
+		}
 
-        for (var i = 0; i < all.length; i++) {
-            if (all[i].id != null && all[i].id.substring(0, 8) == "Resource"){
-				changeFill(all[i],"#aaaaaa");
-				changeOpacity(all[i],".7");
-			}
+		var mouseLeave = function () {
+			document.getElementById("eventTitleLabel").innerHTML = "";
+		}
+		
+		function mapLoaded() {
+			resetStyles();
+			getRooms();
 			
-            for(var j=0;j<activeResources.length;j++)
-            {
-                if (all[i].id != null && all[i].id.replace("Resource", "") == activeResources[j]){
-					changeFill(all[i],"#00ff00");
-					changeOpacity(all[i],".7")
-				}
-            }
-        }
-    }
+			var temp = new Date();
+			temp.setHours(0);
+			temp.setMinutes(0);
+			temp.setSeconds(0);
+			temp.setMilliseconds(0);
 
-    function getRooms() {
-		mapLoaded();
-	
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function () {
-            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                var SerReturn = xmlhttp.responseText;
-                SerReturn = SerReturn.replace(/ |\\|\/|\(|\)/g, '_');
-                activeResources = JSON.parse(SerReturn);
-                document.getElementById("txtHint").innerHTML = SerReturn;
-                mapLoaded();
-            }
-        }
-        xmlhttp.open("GET", "phpTest.php", true);
-        xmlhttp.send();
-    }
+			$('#time').slider('value', (Number(new Date()) - Number(temp)) / 1000);
+			
+			document.getElementById("timeText").innerHTML  = new Date( Number(temp) + $("#time").slider("value")*1000).toLocaleTimeString();
+			
+			currentTime = Number(temp)/1000 + $("#time").slider("value");
+			
+			refreshMap();
+		}
+		
+		$(function() {
+			$( "#time" ).slider({
+				orientation: "horizontal",
+				min: 0,
+				max: 86400,
+				value: 36000,
+				slide: sliderChange,
+				change: sliderChange
+			});
+			$( "#time" ).slider( "value", 36000 );
+			$("#time").draggable();
+		});
+
+		$( "#time" ).slider({
+			range: false
+		});
+		
+		function sliderChange(){
+			var temp = new Date();
+			temp.setHours(0);
+			temp.setMinutes(0);
+			temp.setSeconds(0);
+			temp.setMilliseconds(0);
+			document.getElementById("timeText").innerHTML  = new Date( Number(temp) + $("#time").slider("value")*1000).toLocaleTimeString();
+			
+			currentTime = Number(temp)/1000 + $("#time").slider("value");
+			
+			refreshMap();
+		}
+		
+	   function refreshMap() {
+			var svg = document.getElementById("map-svg"); 
+			var svgDoc = svg.contentDocument;
+			var all = svgDoc.getElementsByTagName("*");
+			
+			if(events == null)
+				return;
+			
+			for (var i = 0; i < all.length; i++) {
+			
+				if (all[i].id == null || all[i].id.substring(0, 8) != "Resource"){
+					continue;
+				}
+			
+				var newFill = "#aaaaaa";
+				var newTooltip = "";
+				
+				for(var j=0;j<events.length;j++)
+				{
+					if(events[j].startTime <= currentTime && events[j].endTime >= currentTime)
+						for(var k=0;k<events[j].resources.length;k++)
+							if (all[i].id != null && all[i].id.replace("Resource", "") == events[j].resources[k]){
+								newFill = "#00ff00";
+								newTooltip = events[j].name;
+							}
+				}
+				
+				all[i].setAttributeNS(null, "customTooltip", newTooltip);
+				changeOpacity(all[i],1);
+				changeFill(all[i],newFill);
+			}
+		}
+
+		function getRooms() {
+
+			if (window.XMLHttpRequest) {
+				// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+			} else {
+				// code for IE6, IE5
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function () {
+				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+					var SerReturn = xmlhttp.responseText;
+					events= JSON.parse(SerReturn);
+					events.forEach(fixObjectDates);
+					refreshMap();
+				}
+			}
+			xmlhttp.open("GET", "getToday.php", true);
+			xmlhttp.send();
+		}
     </script>
 <title>Live Campus Map WIP</title></head>
   <body>
     <h2>Live Campus Map WIP</h2>
-    <div class="page-content">
-        <div><object id="map-svg" width="1200" height="700" type="image/svg+xml" data="/Map.svg" onload="getRooms()"></object></div>
-        <div id="txtHint"><b>Raw Room string</b></div>
-        </div>
+	<div><object id="map-svg" width="80%" height="80%" type="image/svg+xml" data="/Map.svg" onload="mapLoaded()"></object></div><br>
+	<div id="eventTitleLabel"></div>
+	<div id="timeText">10 AM</div>
+	<div id="time"></div>
   </body>
+  <body><br><br><br><br><a href="/HeatMap.html">AC Heat Map</a></body>
 </html>

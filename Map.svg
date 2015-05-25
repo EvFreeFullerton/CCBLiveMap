@@ -9,14 +9,14 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="297mm"
-   height="210mm"
-   viewBox="0 0 1052.3622 744.09448"
+   width="784.17926"
+   height="702.3894"
+   viewBox="0 0 784.17927 702.3894"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="Map.svg"
-   enable-background="new">
+   style="enable-background:new">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -26,18 +26,23 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0199797"
-     inkscape:cx="570.1132"
-     inkscape:cy="330.24459"
+     inkscape:zoom="4.0799188"
+     inkscape:cx="773.49322"
+     inkscape:cy="477.00128"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2048"
-     inkscape:window-height="1130"
-     inkscape:window-x="1272"
-     inkscape:window-y="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1058"
+     inkscape:window-x="3320"
+     inkscape:window-y="64"
      inkscape:window-maximized="1"
-     inkscape:snap-text-baseline="true" />
+     inkscape:snap-text-baseline="true"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -54,8 +59,24 @@
      inkscape:label="All Objects"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-308.26772)"
+     transform="translate(-116.4279,-326.01562)"
      style="display:inline">
+    <rect
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
+       id="ResourceD_Gym"
+       width="152.79016"
+       height="124.45859"
+       x="116.85089"
+       y="487.65302"
+       inkscape:label="#rect3550" />
+    <rect
+       style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
+       id="ResourceD_Gym_Kitchen-7"
+       width="75.827843"
+       height="23.476187"
+       x="117.24964"
+       y="588.49487"
+       inkscape:label="#rect3550" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.72562242;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4126"
@@ -64,7 +85,7 @@
        x="136.12094"
        y="672.32092" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:2.02583122px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:2.02583122px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceE_Sunday_Prayer_Room"
        width="116.90639"
        height="25.617651"
@@ -72,15 +93,7 @@
        y="878.40161"
        inkscape:label="#rect3398" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       id="ResourceD_Gym"
-       width="152.79016"
-       height="124.45859"
-       x="116.85089"
-       y="487.65302"
-       inkscape:label="#rect3550" />
-    <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceD_Gym_Kitchen"
        width="75.827843"
        height="23.476187"
@@ -88,7 +101,7 @@
        y="588.50757"
        inkscape:label="#rect3550" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1.05826306px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1.05826306px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceCommons_MPR"
        width="98.808289"
        height="80.912872"
@@ -97,7 +110,7 @@
        transform="matrix(0.90460742,-0.42624573,0.4056784,0.91401588,0,0)"
        inkscape:label="#rect3522" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:0.73858845px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:0.73858845px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNarthex-9"
        width="37.299664"
        height="29.545736"
@@ -105,7 +118,7 @@
        y="848.78473"
        inkscape:label="#rect3338" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:0.51679051px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:0.51679051px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceE_Chapel"
        width="125.03677"
        height="108.6082"
@@ -114,7 +127,7 @@
        inkscape:label="#rect3336"
        transform="scale(1,-1)" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:0.73858845px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:0.73858845px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNarthex"
        width="37.047127"
        height="127.40427"
@@ -122,7 +135,7 @@
        y="721.51202"
        inkscape:label="#rect3338" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:2.02583122px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:2.02583122px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceE_Worship_Center"
        width="166.47418"
        height="194.0788"
@@ -130,7 +143,7 @@
        y="683.85211"
        inkscape:label="#rect3398" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceE_Choir_Room"
        width="73.125"
        height="40.5611"
@@ -138,7 +151,7 @@
        y="683.60693"
        inkscape:label="#rect3516" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceE_Fireside_Room_and_Kitchen"
        width="124.84867"
        height="45.625008"
@@ -146,7 +159,7 @@
        y="832.58911"
        inkscape:label="#rect3518" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceE_Prayer_Green_Room"
        width="51.964283"
        height="40.044643"
@@ -154,7 +167,7 @@
        y="683.88379"
        inkscape:label="#rect3520" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:0.83179885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:0.83179885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceC_The_Well"
        width="89.434692"
        height="49.229836"
@@ -162,7 +175,7 @@
        y="597.96393"
        inkscape:label="#rect3526" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceD_AMPH_MPR"
        width="80.812202"
        height="68.986237"
@@ -170,7 +183,7 @@
        y="487.71832"
        inkscape:label="#rect3546" />
     <rect
-       style="fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceDAmphLobby"
        width="80.729904"
        height="55.46212"
@@ -416,11 +429,12 @@
        y="453.07123" />
     <rect
        style="fill:#f2f2f2;fill-opacity:1;stroke:#000000;stroke-width:2.05243397;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect4470-0"
+       id="asdf"
        width="83.518997"
        height="203.519"
        x="787.63354"
-       y="457.74036" />
+       y="457.74036"
+       inkscape:label="#rect4470-0" />
     <rect
        style="fill:#f2f2f2;fill-opacity:1;stroke:#000000;stroke-width:0.59810305;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect4470-3"
@@ -469,7 +483,7 @@
          x="152.10719"
          y="563.42834">Gym</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1.05826306px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1.05826306px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceC_212"
        width="62.77573"
        height="42.836441"
@@ -478,7 +492,7 @@
        transform="matrix(0.90611612,-0.42302905,0.39732381,0.91767848,0,0)"
        inkscape:label="#rect3522" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1.05826306px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1.05826306px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceC_209"
        width="65.231209"
        height="22.867249"
@@ -487,7 +501,7 @@
        transform="matrix(0.9023828,-0.43093535,0.42500064,0.90519305,0,0)"
        inkscape:label="#rect3522" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1.05826306px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1.05826306px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceC_202"
        width="32.702881"
        height="26.723209"
@@ -533,7 +547,7 @@
          y="583.0921"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">202</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceA_104"
        width="41.74659"
        height="25.069359"
@@ -553,7 +567,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8">104</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceA_105"
        width="43.826355"
        height="25.069359"
@@ -573,7 +587,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-2">105</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceA_106"
        width="39.666821"
        height="25.069359"
@@ -593,7 +607,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-5">106</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceA_107"
        width="42.439846"
        height="25.069359"
@@ -613,7 +627,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-25">107</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceA_108"
        width="36.893799"
        height="25.069359"
@@ -633,7 +647,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-1">108</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceA_109"
        width="37.587055"
        height="25.069359"
@@ -653,7 +667,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-9">109</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceA_110"
        width="36.893799"
        height="25.069359"
@@ -673,7 +687,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-0">110</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceA_111"
        width="34.120777"
        height="25.069359"
@@ -693,7 +707,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-7">111</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_103"
        width="36.113888"
        height="28.991005"
@@ -713,7 +727,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-74">103</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_104"
        width="35.388344"
        height="28.991005"
@@ -733,7 +747,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-6">104</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_110"
        width="35.759602"
        height="28.991005"
@@ -753,7 +767,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-4">110</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_111"
        width="35.767334"
        height="28.991005"
@@ -773,7 +787,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-48">111</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_112"
        width="34.89566"
        height="28.991005"
@@ -793,7 +807,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-01">112</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_115"
        width="33.427521"
        height="28.991005"
@@ -813,7 +827,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-41">115</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_118"
        width="33.427521"
        height="28.991005"
@@ -833,7 +847,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-69">118</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_122"
        width="32.734264"
        height="28.991005"
@@ -853,7 +867,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-65">122</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_201"
        width="39.282879"
        height="28.010593"
@@ -873,7 +887,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-06">201</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_202"
        width="38.708569"
        height="28.010593"
@@ -893,7 +907,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-8">202</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_203"
        width="38.985523"
        height="28.010593"
@@ -913,7 +927,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-691">203</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_204"
        width="38.519947"
        height="28.010593"
@@ -933,7 +947,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-54">204</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_205"
        width="35.702759"
        height="28.010593"
@@ -953,7 +967,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-26">205</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_206"
        width="36.287273"
        height="27.837278"
@@ -973,7 +987,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-97">206</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_207"
        width="35.98481"
        height="28.357222"
@@ -993,7 +1007,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-52">207</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_208"
        width="35.876072"
        height="27.83728"
@@ -1013,7 +1027,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-748">208</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_123"
        width="33.427521"
        height="28.991005"
@@ -1033,7 +1047,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-57">123</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_124"
        width="32.734264"
        height="28.991005"
@@ -1053,7 +1067,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-93">124</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceD_202"
        width="45.680191"
        height="41.32822"
@@ -1073,7 +1087,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-06-3">202</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceD_203"
        width="59.160851"
        height="42.308632"
@@ -1093,7 +1107,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-8-4">203</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceD_205"
        width="45.27409"
        height="40.347809"
@@ -1113,7 +1127,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-691-4">205</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceD_206"
        width="44.048576"
        height="50.151924"
@@ -1133,7 +1147,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-54-4">206</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceD_201"
        width="45.680191"
        height="48.191105"
@@ -1153,7 +1167,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-06-3-8">201</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceD_204"
        width="44.69978"
        height="47.210693"
@@ -1173,7 +1187,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-8-4-2">204</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_100__100_"
        width="54.994102"
        height="20.675329"
@@ -1193,7 +1207,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-74-6">100</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_100__110_"
        width="54.994102"
        height="20.675329"
@@ -1201,7 +1215,7 @@
        y="709.95526"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_100__120_"
        width="54.994102"
        height="20.675329"
@@ -1209,7 +1223,7 @@
        y="733.40704"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_100__130_"
        width="54.994102"
        height="20.675329"
@@ -1217,7 +1231,7 @@
        y="757.17584"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_100__135_"
        width="54.994102"
        height="20.675329"
@@ -1225,7 +1239,7 @@
        y="779.26166"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_100__150_"
        width="54.994102"
        height="20.675329"
@@ -1233,7 +1247,7 @@
        y="801.87189"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_100__160_"
        width="54.994102"
        height="20.675329"
@@ -1241,7 +1255,7 @@
        y="824.48224"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_100__170_"
        width="54.994102"
        height="20.675329"
@@ -1249,7 +1263,7 @@
        y="847.40961"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_100__180_"
        width="54.994102"
        height="24.088947"
@@ -1257,7 +1271,7 @@
        y="871.44745"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_100__190_and_Kitchen_"
        width="43.719368"
        height="38.304916"
@@ -1373,7 +1387,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-74-6-8">190</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200_Amphitheater"
        width="81.955421"
        height="54.768864"
@@ -1393,7 +1407,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-74-6-8-8">Amph</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__MPR_"
        width="43.479729"
        height="55.46212"
@@ -1413,7 +1427,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-74-6-8-8-3">MPR</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__191_"
        width="38.626938"
        height="16.463135"
@@ -1433,7 +1447,7 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start"
          id="tspan4195-8-74-6-62">191</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__192_"
        width="38.973564"
        height="17.156389"
@@ -1441,7 +1455,7 @@
        y="880.80609"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__193_"
        width="38.626938"
        height="17.156389"
@@ -1449,7 +1463,7 @@
        y="899.52399"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__194_"
        width="37.933681"
        height="14.036739"
@@ -1457,7 +1471,7 @@
        y="917.89508"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__226_"
        width="33.947464"
        height="18.196274"
@@ -1465,7 +1479,7 @@
        y="942.40405"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__227_"
        width="34.467403"
        height="17.156389"
@@ -1473,7 +1487,7 @@
        y="961.66492"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__228_"
        width="34.640717"
        height="16.809763"
@@ -1481,7 +1495,7 @@
        y="980.38281"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__229_"
        width="34.81403"
        height="13.343483"
@@ -1489,7 +1503,7 @@
        y="998.75421"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__230_"
        width="47.292633"
        height="24.088947"
@@ -1497,7 +1511,7 @@
        y="987.31531"
        inkscape:label="#rect3550" />
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceNC_200__232_"
        width="46.660603"
        height="24.088947"
@@ -1647,7 +1661,7 @@
          y="894.36908"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Sunday Prayer Room</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceB_Playground"
        width="92.597549"
        height="132.76576"
@@ -1666,7 +1680,7 @@
          x="708.42969"
          y="529.33093">Playground</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceC_Loft"
        width="81.852081"
        height="19.418451"
@@ -1686,7 +1700,7 @@
          y="591.64996"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.75px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Loft</tspan></text>
     <rect
-       style="display:inline;fill:#00ff00;fill-rule:evenodd;stroke:none;stroke-width:0.83179885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="display:inline;fill:#aaaaaa;fill-rule:evenodd;stroke:none;stroke-width:0.83179885px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:0.69803923"
        id="ResourceC_Library"
        width="89.434692"
        height="49.229836"
@@ -1720,5 +1734,13 @@
          x="262.09918"
          y="801.08313"
          id="tspan4932">Campus</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="ResourceErre"
+       width="47.795071"
+       height="31.618277"
+       x="787.51971"
+       y="629.62256"
+       inkscape:label="#rect3590" />
   </g>
 </svg>

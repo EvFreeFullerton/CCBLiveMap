@@ -1,9 +1,7 @@
 Major stuff:
--Monthly & Daily recurring events (only weekly work right now)
+-audit recurring events (yearly?
 -Dedup json string
 -allow for different times
 -cleanup map
 -Date exceptions
--update DB regularly
 -make code more pretty
--move login info to config file
