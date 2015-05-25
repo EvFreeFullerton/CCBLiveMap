@@ -124,6 +124,7 @@ function CalculateDailyRecurrancesInRange($startTime, $endTime, $event, $recurra
 	return $ret;
 }
 
+//Need to optimize checks for event time range within given time range
 function CalculateWeeklyRecurrancesInRange($startTime, $endTime, $event, $recurrance, $absoluteEnd)
 {
 	$ret = array();
@@ -148,7 +149,7 @@ function CalculateWeeklyRecurrancesInRange($startTime, $endTime, $event, $recurr
 				$newEvent->startTime = date_create_from_format("Y-m-d H:i:s", $searchDate2->format("Y-m-d")." ".$event->startTime->format("H:i:s"));
 				$newEvent->endTime = date_create_from_format("Y-m-d H:i:s", $searchDate2->format("Y-m-d")." ".$event->endTime->format("H:i:s"));
 				//Checks: don't duplicate the original event, verify start & end time range
-				if($newEvent->startTime->format("Y-m-d") != $event->startTime->format("Y-m-d") && $newEvent->startTime < $endTime && $newEvent->endTime > $startTime && !isException($newEvent->startTime, $event))
+				if($newEvent->startTime->format("Y-m-d") != $event->startTime->format("Y-m-d") && $newEvent->startTime < $endTime && $newEvent->endTime > $startTime && !isException($newEvent->startTime, $event) && $newEvent->startTime > $event->startTime && $newEvent->endTime <= $absoluteEnd)
 					array_push($ret, $newEvent);
 				$searchDate2->add(date_interval_create_from_date_string('7 days'));
 			}
