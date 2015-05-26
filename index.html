@@ -1,5 +1,18 @@
 	<html>  <head>
+	
 		<style>
+	
+		#mouseTooltip {
+			pointer-events: none;
+			opacity: 0;
+			background: lightgrey;
+			border:solid gray;
+			position: absolute;
+			max-width: 20em;
+			text-align:center;
+			transition: opacity .5s;
+		}
+
 		#time{
 			float: left;
 			clear: left;
@@ -16,6 +29,13 @@
 	<script>
         var events;
 		var currentTime;
+		
+		function getPos(el) {
+			for (var lx=0, ly=0;
+			el != null;
+			lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+			return {x: lx,y: ly};
+		}
 		
 		function changeOpacity(SVGElement, newOpacity)
 		{
@@ -73,18 +93,22 @@
                 if (all[i].id != null && all[i].id.substring(0, 8) == "Resource") {
 					changeOpacity(all[i],1);
 					changeFill(all[i],"#aaaaaa");
-					all[i].addEventListener("mouseenter", mouseEnter);
+					all[i].addEventListener("mousemove", mouseMove);
                     all[i].addEventListener("mouseleave", mouseLeave);
                 }
             }
 		}	
 		
-		var mouseEnter = function () {
-			document.getElementById("eventTitleLabel").innerHTML = this.getAttributeNS(null, "customTooltip");
+		var mouseMove = function (e) {
+			var mapPos = getPos(document.getElementById("map-svg"));
+			document.getElementById("mouseTooltip").innerHTML = this.getAttributeNS(null, "customTooltip");
+			document.getElementById("mouseTooltip").style.opacity = 1;
+			document.getElementById("mouseTooltip").style.left = e.clientX + mapPos.x + 15;
+			document.getElementById("mouseTooltip").style.top = e.clientY + mapPos.y + 15;
 		}
 
 		var mouseLeave = function () {
-			document.getElementById("eventTitleLabel").innerHTML = "";
+			document.getElementById("mouseTooltip").style.opacity = 0;
 		}
 		
 		function mapLoaded() {
@@ -194,9 +218,9 @@
   <body>
     <h2>Live Campus Map WIP</h2>
 	<div><object id="map-svg" width="80%" height="80%" type="image/svg+xml" data="/Map.svg" onload="mapLoaded()"></object></div><br>
-	<div id="eventTitleLabel"></div>
 	<div id="timeText">10 AM</div>
 	<div id="time"></div>
   </body>
   <body><br><br><br><br><a href="/HeatMap.html">AC Heat Map</a></body>
+  <div id="mouseTooltip" >Event</div>
 </html>
