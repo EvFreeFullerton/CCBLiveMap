@@ -183,7 +183,7 @@
 						for(var k=0;k<events[j].resources.length;k++)
 							if (all[i].id != null && all[i].id.replace("Resource", "") == events[j].resources[k]){
 								newFill = "#00ff00";
-								newTooltip = events[j].name;
+								newTooltip = events[j].name+"<br>"+(new Date( Number(events[j].startTime)*1000)).toLocaleTimeString()+" to "+(new Date( Number(events[j].endTime)*1000)).toLocaleTimeString();
 							}
 				}
 				
