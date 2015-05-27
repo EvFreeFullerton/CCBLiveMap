@@ -42,6 +42,17 @@
 		{
 			currentStyle = SVGElement.getAttributeNS(null, "style");
 			if(currentStyle != null){
+				currentStyle = currentStyle.replace(/;(\s|)transition:[^;]+(;|$)/i, ";");
+				currentStyle = currentStyle.replace(/^(\s|)transition:[^;]+(;|$)/i, "");
+				currentStyle = currentStyle.replace(/;(\s|)+$/i,"")
+				SVGElement.setAttributeNS(null, "style",  currentStyle + ";transition: fill 1s");
+			} else{
+				SVGElement.setAttributeNS(null, "style",  "transition: fill 1s");
+			}
+			SVGElement.setAttributeNS(null, "style",  currentStyle + ";transition: fill 1s");
+		
+			currentStyle = SVGElement.getAttributeNS(null, "style");
+			if(currentStyle != null){
 				currentStyle = currentStyle.replace(/;(\s|)Fill:[^;]+(;|$)/i, ";");
 				currentStyle = currentStyle.replace(/^(\s|)Fill:[^;]+(;|$)/i, "");
 				currentStyle = currentStyle.replace(/;(\s|)+$/i,"")
