@@ -3,7 +3,7 @@ require '../config/CCBCredentials.php';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
-require 'MySqlcredentials.php';
+require '../config/MySQLCredentials.php';
 ini_set('max_execution_time', 1000);
 
 function getSslPage($url) {
