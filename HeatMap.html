@@ -52,7 +52,7 @@
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";Fill:"+newFill);
 		}
 		
-		function removePointerEvents(SVGElement)
+		function ignoreMouse(SVGElement)
 		{
 			currentStyle = SVGElement.getAttributeNS(null, "style");
 			if(currentStyle != null){
@@ -74,6 +74,9 @@
             for(var i=0; i < all.length; i++) {
                 if (all[i].id != null && all[i].id.substring(0, 8) == "Resource") {
 					changeFill(all[i],"#aaaaaa");
+                }
+				if (all[i].id != null && all[i].tagName.toLowerCase() == "text") {
+					ignoreMouse(all[i]);
                 }
             }
 		}

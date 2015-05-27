@@ -64,6 +64,20 @@
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";Fill:"+newFill);
 		}
 		
+		function ignoreMouse(SVGElement)
+		{
+			currentStyle = SVGElement.getAttributeNS(null, "style");
+			if(currentStyle != null){
+				currentStyle = currentStyle.replace(/;(\s|)pointer-events:[^;]+(;|$)/i, ";");
+				currentStyle = currentStyle.replace(/^(\s|)pointer-events:[^;]+(;|$)/i, "");
+				currentStyle = currentStyle.replace(/;(\s|)+$/i,"")
+				SVGElement.setAttributeNS(null, "style",  currentStyle + ";pointer-events: none");
+			} else{
+				SVGElement.setAttributeNS(null, "style",  "pointer-events:none");
+			}
+			SVGElement.setAttributeNS(null, "style",  currentStyle + ";pointer-events:none");
+		}
+		
 		function xinspect(o,i){
 			if(typeof i=='undefined')i='';
 			if(i.length>50)return '[MAX ITERATIONS]';
@@ -95,6 +109,9 @@
 					changeFill(all[i],"#aaaaaa");
 					all[i].addEventListener("mousemove", mouseMove);
                     all[i].addEventListener("mouseleave", mouseLeave);
+                }
+				if (all[i].id != null && all[i].tagName.toLowerCase() == "text") {
+					ignoreMouse(all[i]);
                 }
             }
 		}	
