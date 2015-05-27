@@ -1,3 +1,7 @@
 /MySQLcredentials.php
 /CCBCredentials.php
 /PRTGCredentials.php
+/config/MySQLcredentials.php
+/config/CCBCredentials.php
+/config/PRTGCredentials.php
+/thumbs.db
