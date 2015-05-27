@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
-require 'PRTGCredentials.php';
+require '../config/PRTGCredentials.php';
 
 class thermostat implements JsonSerializable
 {

@@ -22,10 +22,10 @@
 		#time .ui-slider-range { background: #729fcf; }
 		#time .ui-slider-handle { border-color: #729fcf; }
 	</style>
-	<link rel="stylesheet" href="jquery-ui-1.11.4.custom/jquery-ui.css">
-	<script src="jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
-	<script src="jquery-ui-1.11.4.custom/jquery-ui.js"></script>
-	<script src="jquery.ui.touch-punch.min.js"></script>
+	<link rel="stylesheet" href="scripts/jquery-ui-1.11.4.custom/jquery-ui.css">
+	<script src="scripts/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+	<script src="scripts/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	<script src="scripts/jquery.ui.touch-punch.min.js"></script>
 	<script>
         var events;
 		var currentTime;
@@ -239,14 +239,14 @@
 					refreshMap();
 				}
 			}
-			xmlhttp.open("GET", "getToday.php", true);
+			xmlhttp.open("GET", "scripts/getToday.php", true);
 			xmlhttp.send();
 		}
     </script>
 <title>Live Campus Map WIP</title></head>
   <body>
     <h2>Live Campus Map WIP</h2>
-	<div><object id="map-svg" width="80%" height="80%" type="image/svg+xml" data="/Map.svg" onload="mapLoaded()"></object></div><br>
+	<div><object id="map-svg" width="80%" height="80%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object></div><br>
 	<div id="timeText">10 AM</div>
 	<div id="time"></div>
   </body>

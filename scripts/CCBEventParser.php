@@ -1,5 +1,5 @@
 <?php
-require 'MySqlcredentials.php';
+require '../config/MySqlcredentials.php';
 
 class CalEvent implements JsonSerializable
 {
