@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3710343"
-     inkscape:cx="408.225"
-     inkscape:cy="351.95047"
+     inkscape:zoom="3.8778707"
+     inkscape:cx="281.38874"
+     inkscape:cy="571.48895"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1920,5 +1920,10 @@
          y="494.40393"
          id="tspan4503-1-2-1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans, Normal';text-align:center;writing-mode:lr-tb;text-anchor:middle">D-BLDG Downstairs</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:1.5,4.5;stroke-dashoffset:0"
+       d="m 317.82708,375.4694 0,120.16904"
+       id="path4614"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
