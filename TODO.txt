@@ -1,7 +1,0 @@
-Major stuff:
--audit recurring events (yearly?
--Dedup json string
--allow for different times
--cleanup map
--Date exceptions
--make code more pretty
