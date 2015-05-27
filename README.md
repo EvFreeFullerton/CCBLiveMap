@@ -11,6 +11,7 @@ Using a SVG map we are able to change the color of which rooms / buildings on ca
 - cleanup map
 - make code more pretty
 - Pull common js svg code into separate file from html pages (tooltips, opacity, fill, transistions)
+- Speed up temperature map load time
 
 **UI stuff:**
 - In an idle state zoom between buildings to provide more detail as to what is happening in that section of the campus
