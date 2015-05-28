@@ -29,6 +29,8 @@
 	<script>
         var events;
 		var currentTime;
+		var liveRefreshInterval;
+		var lastEventDataRefresh;
 		
 		function getPos(el) {
 			for (var lx=0, ly=0;
@@ -101,10 +103,6 @@
 			return r.join(i+'\n');
 		}
 		
-		function currentSecondsSinceEpoch(){
-			return Number(new Date())/1000;
-		}
-		
 		function fixObjectDates(element, index, array) {
 			array[index].startTime = Number(element.startTime);
 			array[index].endTime = Number(element.endTime);
@@ -140,10 +138,7 @@
 			document.getElementById("mouseTooltip").style.opacity = 0;
 		}
 		
-		function mapLoaded() {
-			resetStyles();
-			getRooms();
-			
+		function sliderToCurrentTime(){
 			var temp = new Date();
 			temp.setHours(0);
 			temp.setMinutes(0);
@@ -155,8 +150,15 @@
 			document.getElementById("timeText").innerHTML  = new Date( Number(temp) + $("#time").slider("value")*1000).toLocaleTimeString();
 			
 			currentTime = Number(temp)/1000 + $("#time").slider("value");
-			
+		}
+		
+		function mapLoaded() {
+			resetStyles();
+			sliderToCurrentTime();
+			getRooms();
 			refreshMap();
+			LiveMode();
+			window.setInterval(eventDataRefreshCallback,30000);
 		}
 		
 		$(function() {
@@ -165,9 +167,8 @@
 				min: 0,
 				max: 86400,
 				value: 36000,
-				slide: sliderChange,
-				change: sliderChange
-			});
+				slide: sliderChange
+				});
 			$( "#time" ).slider( "value", 36000 );
 			$("#time").draggable();
 		});
@@ -175,6 +176,38 @@
 		$( "#time" ).slider({
 			range: false
 		});
+		
+		function LiveMode(){
+			document.getElementById('modeSelect').value = 'live';
+			liveRefreshInterval = window.setInterval(LiveIntervalCallback,1000);
+			sliderToCurrentTime();
+			refreshMap();
+		}
+		
+		function LiveIntervalCallback(){
+			sliderToCurrentTime();
+			refreshMap();
+		}
+		
+		//Refresh event data every 5 minutes or after midnight
+		function eventDataRefreshCallback(){
+			var currentTime = new Date();
+			if((Number(currentTime)-Number(lastEventDataRefresh)) > 5*60*1000 || (lastEventDataRefresh.getHours() == 23 && currentTime.getHours == 0)){
+				getRooms();
+			}
+		}
+		
+		function manualMode(){
+			document.getElementById('modeSelect').value = 'manual';
+			window.clearInterval(liveRefreshInterval);
+		}
+		
+		function modeChange(){
+			if(document.getElementById('modeSelect').value == 'manual')
+				manualMode();
+			if(document.getElementById('modeSelect').value == 'live')
+				LiveMode();
+		}
 		
 		function sliderChange(){
 			var temp = new Date();
@@ -187,6 +220,8 @@
 			currentTime = Number(temp)/1000 + $("#time").slider("value");
 			
 			refreshMap();
+
+			manualMode();
 		}
 		
 	   function refreshMap() {
@@ -234,9 +269,11 @@
 			xmlhttp.onreadystatechange = function () {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 					var SerReturn = xmlhttp.responseText;
-					events= JSON.parse(SerReturn);
-					events.forEach(fixObjectDates);
+					var tempEvents= JSON.parse(SerReturn);
+					tempEvents.forEach(fixObjectDates);
+					events=tempEvents;
 					refreshMap();
+					lastEventDataRefresh=new Date();
 				}
 			}
 			xmlhttp.open("GET", "scripts/getToday.php", true);
@@ -246,8 +283,8 @@
 <title>Live Campus Map WIP</title></head>
   <body>
     <h2>Live Campus Map WIP</h2>
-	<div><object id="map-svg" width="80%" height="80%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object></div><br>
-	<div id="timeText">10 AM</div>
+	<div><object id="map-svg" width="80%" height="80%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object></div><br><br>
+	<div id="timeText">10 AM</div> <select id='modeSelect' onchange="modeChange()"><option value='live'>Live</option><option value='manual'>Time Slider</option></select><br>
 	<div id="time"></div>
   </body>
   <body><br><br><br><br><a href="HeatMap.html">AC Heat Map</a></body>
