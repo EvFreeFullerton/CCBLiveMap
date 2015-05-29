@@ -9,6 +9,11 @@ ul {
 	font-size: 20px;
 }
 
+#map-svg{
+	max-width: 700px;
+	width: 100%;
+}
+
 #wifimouseTooltip {
 	pointer-events: none;
 	opacity: 0;
@@ -19,9 +24,7 @@ ul {
     text-align:center;
 	transition: opacity .5s;
 }
-	#modeSelect{
-		width:
-	}
+
 		#mouseTooltip {
 			pointer-events: none;
 			opacity: 0;

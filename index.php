@@ -3,7 +3,7 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <style>
       body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-top: 80px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -36,7 +36,7 @@
       /* Set the fixed height of the footer here */
       #push,
       #footer {
-        height: 60px;
+        height: 80px;
       }
       #footer {
         background-color: #f5f5f5;
@@ -45,10 +45,11 @@
       /* Lastly, apply responsive CSS fixes as necessary */
       @media (max-width: 767px) {
         #footer {
-          margin-left: -20px;
+ /*         margin-left: -20px;
           margin-right: -20px;
           padding-left: 20px;
           padding-right: 20px;
+*/
         }
       }
 
@@ -330,32 +331,52 @@
 	<title>Live Campus Map</title>
 </head>
   <body>
+    <div id="wrap">
 		<?php
 			include 'menu.php';
 		?>
-		<div>
-			<object id="map-svg" width="100%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
-		</div>
+      <!-- Begin page content -->
+      <div class="container">
 
-		<div id="footer">
-			<div class="containe-fluid">
-			<div class="row-fluid">
-					<div class="span2">
-						<div id="timeText">10 AM</div>
+					<div>
+						<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
 					</div>
-					<div class="span2">
-						<select id='modeSelect' onchange="modeChange()">
-							<option value='live'>Live</option>
-							<option value='manual'>Time Slider</option>
-						</select>
+
+      </div>
+
+ 	<div id="push"></div>
+	<div id="footer">
+		<div class="container">
+
+			<div class="container-fluid">
+				<div class="row-fluid">
+
+					<div class="span12">
+
+						<div class="span4">
+							<div id="timeText">10 AM</div>
+						</div>
+						<div class="span8">
+							<select id='modeSelect' onchange="modeChange()">
+								<option value='live'>Live</option>
+								<option value='manual'>Time Slider</option>
+							</select>
+						</div>
 					</div>
-				<div class="span8">
-					<div id="time"></div>
-					<div id="mouseTooltip" >Event</div>
+						<div class="span12">
+							<div id="time"></div>
+							<div id="mouseTooltip" >Event</div>
+						</div>
+
+					</div>
+
 				</div>
 			</div>
+
 		</div>
+	</div>
 
   <script src="js/bootstrap.min.js"></script>
+	</div>
   </body>
 </html>
