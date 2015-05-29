@@ -5,3 +5,6 @@
 /config/CCBCredentials.php
 /config/PRTGCredentials.php
 /thumbs.db
+config/CCBCredentials - SAMPLE.php
+config/PRTGCredentials - SAMPLE.php
+config/MySQLCredentials - SAMPLE.php
