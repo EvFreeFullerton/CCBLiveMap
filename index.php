@@ -36,7 +36,7 @@
       /* Set the fixed height of the footer here */
       #push,
       #footer {
-        height: 140px;
+        height: 60px;
       }
       #footer {
         background-color: #f5f5f5;
@@ -339,11 +339,14 @@
 		<div id="footer">
 			<div class="containe-fluid">
 			<div class="row-fluid">
-					<div class="span1">
+					<div class="span2">
 						<div id="timeText">10 AM</div>
 					</div>
-					<div class="span3">
-						<select id='modeSelect' onchange="modeChange()"><option value='live'>Live</option><option value='manual'>Time Slider</option></select>
+					<div class="span2">
+						<select id='modeSelect' onchange="modeChange()">
+							<option value='live'>Live</option>
+							<option value='manual'>Time Slider</option>
+						</select>
 					</div>
 				<div class="span8">
 					<div id="time"></div>

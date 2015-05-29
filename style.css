@@ -5,6 +5,9 @@ ul {
     padding: 0;
 }
 
+#timeText{
+	font-size: 20px;
+}
 
 #wifimouseTooltip {
 	pointer-events: none;
@@ -16,7 +19,9 @@ ul {
     text-align:center;
 	transition: opacity .5s;
 }
-
+	#modeSelect{
+		width:
+	}
 		#mouseTooltip {
 			pointer-events: none;
 			opacity: 0;
