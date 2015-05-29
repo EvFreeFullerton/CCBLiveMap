@@ -13,7 +13,59 @@
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
+    <style type="text/css">
 
+      /* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+
+
+      /* Custom page CSS
+      -------------------------------------------------- */
+      /* Not required for template or sticky footer method. */
+
+      #wrap > .container {
+        padding-top: 60px;
+      }
+      .container .controls {
+        margin: 20px 0;
+      }
+
+    </style>
 
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="scripts/jquery-ui-1.11.4.custom/jquery-ui.css">
@@ -279,10 +331,18 @@
 <?php
 	include 'menu.php';
 ?>
-	<div><object id="map-svg" width="100%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object></div><br><br>
-	<div id="timeText">10 AM</div> <select id='modeSelect' onchange="modeChange()"><option value='live'>Live</option><option value='manual'>Time Slider</option></select><br>
-	<div id="time"></div>
-  <div id="mouseTooltip" >Event</div>
+	<div><object id="map-svg" width="100%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
+
+    <div id="footer">
+      <div class="container">
+        <p class="muted controls">
+					<div id="timeText">10 AM</div> <select id='modeSelect' onchange="modeChange()"><option value='live'>Live</option><option value='manual'>Time Slider</option></select><br>
+					<div id="time"></div>
+				  <div id="mouseTooltip" >Event</div>
+				</p>
+        </div>
+    </div>
+
   <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
