@@ -274,12 +274,11 @@
 			xmlhttp.send();
 		}
     </script>
-<title>Live Campus Map WIP</title></head>
+<title>Live Campus Map</title></head>
   <body>
 <?php
 	include 'menu.php';
 ?>
-    <h2>Live Campus Map WIP</h2>
 	<div><object id="map-svg" width="80%" height="80%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object></div><br><br>
 	<div id="timeText">10 AM</div> <select id='modeSelect' onchange="modeChange()"><option value='live'>Live</option><option value='manual'>Time Slider</option></select><br>
 	<div id="time"></div>

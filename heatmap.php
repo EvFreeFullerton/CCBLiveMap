@@ -221,8 +221,6 @@
 <?php
 	include 'menu.php';
 ?>
-      <h2>Campus Temperatures</h2>
-
 	<div><object id="map-svg" title="HellO" width="80%" height="80%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object></div><br>
 	<a href="index.html">Events Map</a>
 	<div id="test"></div>
