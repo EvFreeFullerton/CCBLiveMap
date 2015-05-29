@@ -1,27 +1,7 @@
-	<html>  <head>
-	
-		<style>
-	
-		#mouseTooltip {
-			pointer-events: none;
-			opacity: 0;
-			background: lightgrey;
-			border:solid gray;
-			position: absolute;
-			max-width: 20em;
-			text-align:center;
-			transition: opacity .5s;
-		}
+	<html>
+	<head>
 
-		#time{
-			float: left;
-			clear: left;
-			width: 80%;
-			margin: 20px;
-		}
-		#time .ui-slider-range { background: #729fcf; }
-		#time .ui-slider-handle { border-color: #729fcf; }
-	</style>
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="scripts/jquery-ui-1.11.4.custom/jquery-ui.css">
 	<script src="scripts/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
 	<script src="scripts/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
@@ -31,14 +11,14 @@
 		var currentTime;
 		var liveRefreshInterval;
 		var lastEventDataRefresh;
-		
+
 		function getPos(el) {
 			for (var lx=0, ly=0;
 			el != null;
 			lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
 			return {x: lx,y: ly};
 		}
-		
+
 		function changeOpacity(SVGElement, newOpacity)
 		{
 			currentStyle = SVGElement.getAttributeNS(null, "style");
@@ -51,7 +31,7 @@
 				SVGElement.setAttributeNS(null, "style",  "Opacity:"+newOpacity);
 			}
 		}
-		
+
 		function changeFill(SVGElement, newFill)
 		{
 			currentStyle = SVGElement.getAttributeNS(null, "style");
@@ -64,8 +44,8 @@
 				SVGElement.setAttributeNS(null, "style",  "transition: fill .4s");
 			}
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";transition: fill .4s");
-		
-		
+
+
 			currentStyle = SVGElement.getAttributeNS(null, "style");
 			if(currentStyle != null){
 				currentStyle = currentStyle.replace(/;(\s|)Fill:[^;]+(;|$)/i, ";");
@@ -77,7 +57,7 @@
 			}
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";Fill:"+newFill);
 		}
-		
+
 		function ignoreMouse(SVGElement)
 		{
 			currentStyle = SVGElement.getAttributeNS(null, "style");
@@ -91,7 +71,7 @@
 			}
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";pointer-events:none");
 		}
-		
+
 		function xinspect(o,i){
 			if(typeof i=='undefined')i='';
 			if(i.length>50)return '[MAX ITERATIONS]';
@@ -102,15 +82,15 @@
 			}
 			return r.join(i+'\n');
 		}
-		
+
 		function fixObjectDates(element, index, array) {
 			array[index].startTime = Number(element.startTime);
 			array[index].endTime = Number(element.endTime);
 			array[index].resources = JSON.parse(array[index].resources.replace(/ |\\|\/|\(|\)/g, '_'));
 		}
-		
+
 		var resetStyles = function (){
-            var svg = document.getElementById("map-svg"); 
+            var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
             var all = svgDoc.getElementsByTagName("*");
             for(var i=0; i < all.length; i++) {
@@ -124,8 +104,8 @@
 					ignoreMouse(all[i]);
                 }
             }
-		}	
-		
+		}
+
 		var mouseMove = function (e) {
 			var mapPos = getPos(document.getElementById("map-svg"));
 			document.getElementById("mouseTooltip").innerHTML = this.getAttributeNS(null, "customTooltip");
@@ -137,7 +117,7 @@
 		var mouseLeave = function () {
 			document.getElementById("mouseTooltip").style.opacity = 0;
 		}
-		
+
 		function sliderToCurrentTime(){
 			var temp = new Date();
 			temp.setHours(0);
@@ -146,12 +126,12 @@
 			temp.setMilliseconds(0);
 
 			$('#time').slider('value', (Number(new Date()) - Number(temp)) / 1000);
-			
+
 			document.getElementById("timeText").innerHTML  = new Date( Number(temp) + $("#time").slider("value")*1000).toLocaleTimeString();
-			
+
 			currentTime = Number(temp)/1000 + $("#time").slider("value");
 		}
-		
+
 		function mapLoaded() {
 			resetStyles();
 			sliderToCurrentTime();
@@ -160,7 +140,7 @@
 			LiveMode();
 			window.setInterval(eventDataRefreshCallback,30000);
 		}
-		
+
 		$(function() {
 			$( "#time" ).slider({
 				orientation: "horizontal",
@@ -176,19 +156,19 @@
 		$( "#time" ).slider({
 			range: false
 		});
-		
+
 		function LiveMode(){
 			document.getElementById('modeSelect').value = 'live';
 			liveRefreshInterval = window.setInterval(LiveIntervalCallback,1000);
 			sliderToCurrentTime();
 			refreshMap();
 		}
-		
+
 		function LiveIntervalCallback(){
 			sliderToCurrentTime();
 			refreshMap();
 		}
-		
+
 		//Refresh event data every 5 minutes or after midnight
 		function eventDataRefreshCallback(){
 			var currentTime = new Date();
@@ -196,19 +176,19 @@
 				getRooms();
 			}
 		}
-		
+
 		function manualMode(){
 			document.getElementById('modeSelect').value = 'manual';
 			window.clearInterval(liveRefreshInterval);
 		}
-		
+
 		function modeChange(){
 			if(document.getElementById('modeSelect').value == 'manual')
 				manualMode();
 			if(document.getElementById('modeSelect').value == 'live')
 				LiveMode();
 		}
-		
+
 		function sliderChange(){
 			var temp = new Date();
 			temp.setHours(0);
@@ -216,31 +196,31 @@
 			temp.setSeconds(0);
 			temp.setMilliseconds(0);
 			document.getElementById("timeText").innerHTML  = new Date( Number(temp) + $("#time").slider("value")*1000).toLocaleTimeString();
-			
+
 			currentTime = Number(temp)/1000 + $("#time").slider("value");
-			
+
 			refreshMap();
 
 			manualMode();
 		}
-		
+
 	   function refreshMap() {
-			var svg = document.getElementById("map-svg"); 
+			var svg = document.getElementById("map-svg");
 			var svgDoc = svg.contentDocument;
 			var all = svgDoc.getElementsByTagName("*");
-			
+
 			if(events == null)
 				return;
-			
+
 			for (var i = 0; i < all.length; i++) {
-			
+
 				if (all[i].id == null || all[i].id.substring(0, 8) != "Resource"){
 					continue;
 				}
-			
+
 				var newFill = "#aaaaaa";
 				var newTooltip = "";
-				
+
 				for(var j=0;j<events.length;j++)
 				{
 					if(events[j].startTime <= currentTime && events[j].endTime >= currentTime)
@@ -250,7 +230,7 @@
 								newTooltip = events[j].name+"<br>"+(new Date( Number(events[j].startTime)*1000)).toLocaleTimeString()+" to "+(new Date( Number(events[j].endTime)*1000)).toLocaleTimeString();
 							}
 				}
-				
+
 				all[i].setAttributeNS(null, "customTooltip", newTooltip);
 				changeOpacity(all[i],1);
 				changeFill(all[i],newFill);
@@ -282,11 +262,13 @@
     </script>
 <title>Live Campus Map WIP</title></head>
   <body>
+<?php
+	include 'menu.php';
+?>
     <h2>Live Campus Map WIP</h2>
 	<div><object id="map-svg" width="80%" height="80%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object></div><br><br>
 	<div id="timeText">10 AM</div> <select id='modeSelect' onchange="modeChange()"><option value='live'>Live</option><option value='manual'>Time Slider</option></select><br>
 	<div id="time"></div>
-  </body>
-  <body><br><br><br><br><a href="HeatMap.html">AC Heat Map</a></body>
   <div id="mouseTooltip" >Event</div>
+  </body>
 </html>

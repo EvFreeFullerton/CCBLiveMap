@@ -1,20 +1,6 @@
-	<html>  <head>
-	
-	<style>
-	
-#mouseTooltip {
-	pointer-events: none;
-	opacity: 0;
-    background: lightgrey;
-    border:solid gray;
-    position: absolute;
-    max-width: 8em;
-    text-align:center;
-	transition: opacity .5s;
-}
-
-	</style>
-
+	<html>
+	<head>
+	<link rel="stylesheet" href="style.css">
 	<script>
 		var thermostatData;
 
@@ -24,7 +10,7 @@
 			lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
 			return {x: lx,y: ly};
 		}
-	
+
 		function elementMouseOver(e){
 			var mapPos = getPos(document.getElementById("map-svg"));
 			var temp = this.getAttributeNS(null, "temperature");
@@ -33,11 +19,11 @@
 			document.getElementById("mouseTooltip").style.left = e.clientX + mapPos.x + 15;
 			document.getElementById("mouseTooltip").style.top = e.clientY + mapPos.y + 15;
 		}
-		
+
 		function mouseLeave(){
 			document.getElementById("mouseTooltip").style.opacity = 0;
 		}
-		
+
 		function changeFill(SVGElement, newFill)
 		{
 			currentStyle = SVGElement.getAttributeNS(null, "style");
@@ -50,7 +36,7 @@
 				SVGElement.setAttributeNS(null, "style",  "transition: fill 1s");
 			}
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";transition: fill 1s");
-		
+
 			currentStyle = SVGElement.getAttributeNS(null, "style");
 			if(currentStyle != null){
 				currentStyle = currentStyle.replace(/;(\s|)Fill:[^;]+(;|$)/i, ";");
@@ -62,7 +48,7 @@
 			}
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";Fill:"+newFill);
 		}
-		
+
 		function ignoreMouse(SVGElement)
 		{
 			currentStyle = SVGElement.getAttributeNS(null, "style");
@@ -76,10 +62,10 @@
 			}
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";pointer-events:none");
 		}
-		
-		
+
+
 		var resetStyles = function (){
-            var svg = document.getElementById("map-svg"); 
+            var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
             var all = svgDoc.getElementsByTagName("*");
             for(var i=0; i < all.length; i++) {
@@ -91,9 +77,9 @@
                 }
             }
 		}
-		
+
 		function changeElementColor(name, color, temperature){
-		     var svg = document.getElementById("map-svg"); 
+		     var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
             var all = svgDoc.getElementsByTagName("*");
             for(var i=0; i < all.length; i++) {
@@ -105,7 +91,7 @@
                 }
             }
 		}
-		
+
 		function mapLoaded() {
 			resetStyles();
 			getRooms();
@@ -119,12 +105,12 @@
 			}
 			return 0;
 		}
-		
+
 		function componentToHex(c) {
 			var hex = c.toString(16);
 			return hex.length == 1 ? "0" + hex : hex;
 		}
-		
+
 		function HSVtoRGB(h, s, v) {
 			var r, g, b, i, f, p, q, t;
 			i = Math.floor(h * 6);
@@ -142,31 +128,31 @@
 			}
 			return "#" + componentToHex( Math.floor(r * 255)) + componentToHex(Math.floor(g * 255)) + componentToHex(Math.floor(b * 255));
 		}
-		
+
 		function rgbToHex(r, g, b) {
 			return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 		}
-		
+
 		function tempToColor(temp)
 		{
 			var min = 68;
 			var max = 80;
 			var range = max - min;
-		
+
 			var Hue;
 			if(temp < min){
 				tmep = min;
 			}else if(temp>max){
 			temp = max;
 			}
-			
+
 			Hue = ((range-(temp-min))*240/range)/360;
 			var S = 1;
 			var V = 1;
-			
+
 			return HSVtoRGB(Hue, 1, 1);
 		}
-		
+
 		function setupRoom(resource, thermostat){
 			var temperature = getTemp(thermostat);
 			changeElementColor(resource, tempToColor(temperature),temperature);
@@ -176,7 +162,7 @@
 			element.addEventListener("mousemove",elementMouseOver);
 			element.addEventListener("mouseleave",mouseLeave);
 		}
-		
+
 		function getRooms() {
 
 			if (window.XMLHttpRequest) {
@@ -190,18 +176,18 @@
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 					var SerReturn = xmlhttp.responseText;
 					thermostatData = JSON.parse(SerReturn);
-					
+
 					setupRoom("ResourceNarthex", "Worship Center Lobby");
-					
+
 					var WorshipCenterTemp = Math.round((Number(getTemp("Worship Center Stage")) + Number(getTemp("Worship Center West")) + Number(getTemp("Worship Center East")))/3);
-					
+
 					changeElementColor("ResourceE_Worship_Center", tempToColor(WorshipCenterTemp),WorshipCenterTemp);
 					var svg = document.getElementById("map-svg");
 					var svgDoc = svg.contentDocument;
 					element = svgDoc.getElementById("ResourceE_Worship_Center");
 					element.addEventListener("mousemove",elementMouseOver);
 					element.addEventListener("mouseleave",mouseLeave);
-					
+
 					setupRoom("ResourceE_Choir_Room", "Choir Room");
 					setupRoom("ResourceE_Chapel", "Chapel");
 					setupRoom("ResourceE_Prayer_Green_Room", "Green Room");
@@ -210,7 +196,7 @@
 					setupRoom("ResourceE_Choir_Room", "Choir Room");
 					setupRoom("ResourceNC_200_Amphitheater", "NC Amph");
 					setupRoom("ResourceB_110", "B110");
-					
+
 
 				}
 			}
@@ -220,6 +206,9 @@
     </script>
 <title>Campus Temperatures</title></head>
   <body>
+<?php
+	include 'menu.php';
+?>
       <h2>Campus Temperatures</h2>
 
 	<div><object id="map-svg" title="HellO" width="80%" height="80%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object></div><br>

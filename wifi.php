@@ -1,20 +1,7 @@
-	<html>  <head>
-	
-	<style>
-	
-#mouseTooltip {
-	pointer-events: none;
-	opacity: 0;
-    background: lightgrey;
-    border:solid gray;
-    position: absolute;
-    max-width: 8em;
-    text-align:center;
-	transition: opacity .5s;
-}
+	<html>
+	<head>
 
-	</style>
-
+	<link rel="stylesheet" href="style.css">
 	<script>
 		var wifiData;
 
@@ -24,7 +11,7 @@
 			lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
 			return {x: lx,y: ly};
 		}
-	
+
 		function elementMouseOver(e){
 			var mapPos = getPos(document.getElementById("map-svg"));
 			var temp = this.getAttributeNS(null, "temperature");
@@ -33,11 +20,11 @@
 			document.getElementById("mouseTooltip").style.left = e.clientX + mapPos.x + 15;
 			document.getElementById("mouseTooltip").style.top = e.clientY + mapPos.y + 15;
 		}
-		
+
 		function mouseLeave(){
 			document.getElementById("mouseTooltip").style.opacity = 0;
 		}
-		
+
 		function changeFill(SVGElement, newFill)
 		{
 			currentStyle = SVGElement.getAttributeNS(null, "style");
@@ -50,7 +37,7 @@
 				SVGElement.setAttributeNS(null, "style",  "transition: fill 1s");
 			}
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";transition: fill 1s");
-		
+
 			currentStyle = SVGElement.getAttributeNS(null, "style");
 			if(currentStyle != null){
 				currentStyle = currentStyle.replace(/;(\s|)Fill:[^;]+(;|$)/i, ";");
@@ -62,7 +49,7 @@
 			}
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";Fill:"+newFill);
 		}
-		
+
 		function ignoreMouse(SVGElement)
 		{
 			currentStyle = SVGElement.getAttributeNS(null, "style");
@@ -76,10 +63,10 @@
 			}
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";pointer-events:none");
 		}
-		
-		
+
+
 		var resetStyles = function (){
-            var svg = document.getElementById("map-svg"); 
+            var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
             var all = svgDoc.getElementsByTagName("*");
             for(var i=0; i < all.length; i++) {
@@ -91,9 +78,9 @@
                 }
             }
 		}
-		
+
 		function changeElementColor(name, color, temperature){
-		     var svg = document.getElementById("map-svg"); 
+		     var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
             var all = svgDoc.getElementsByTagName("*");
             for(var i=0; i < all.length; i++) {
@@ -105,14 +92,14 @@
                 }
             }
 		}
-		
+
 		function changeElementText(name, textV){
-		     var svg = document.getElementById("map-svg"); 
+		     var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
             var all = svgDoc.getElementById(name);
 			all.textContent= textV;
 		}
-		
+
 		function mapLoaded() {
 			resetStyles();
 			getRooms();
@@ -126,12 +113,12 @@
 			}
 			return 0;
 		}
-		
+
 		function componentToHex(c) {
 			var hex = c.toString(16);
 			return hex.length == 1 ? "0" + hex : hex;
 		}
-		
+
 		function setupRoom(resource, thermostat){
 			var temperature = getTemp(thermostat);
 			changeElementColor(resource, tempToColor(temperature),temperature);
@@ -141,7 +128,7 @@
 			element.addEventListener("mousemove",elementMouseOver);
 			element.addEventListener("mouseleave",mouseLeave);
 		}
-		
+
 		function getRooms() {
 
 			if (window.XMLHttpRequest) {
@@ -164,9 +151,12 @@
 			xmlhttp.send();
 		}
     </script>
-<title>Campus Temperatures</title></head>
+<title>Campus WiFi Usage</title></head>
   <body>
-      <h2>Campus Temperatures</h2>
+<?php
+	include 'menu.php';
+?>
+      <h2>Campus WiFi Usage</h2>
 
 	<div><object id="map-svg" title="HellO" width="80%" height="80%" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object></div><br>
 	<a href="index.html">Events Map</a>

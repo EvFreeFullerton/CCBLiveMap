@@ -1,0 +1,38 @@
+/* Horizontal Menu Scheme */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+#wifimouseTooltip {
+	pointer-events: none;
+	opacity: 0;
+    background: lightgrey;
+    border:solid gray;
+    position: absolute;
+    max-width: 8em;
+    text-align:center;
+	transition: opacity .5s;
+}
+
+		#mouseTooltip {
+			pointer-events: none;
+			opacity: 0;
+			background: lightgrey;
+			border:solid gray;
+			position: absolute;
+			max-width: 20em;
+			text-align:center;
+			transition: opacity .5s;
+		}
+
+		#time{
+			float: left;
+			clear: left;
+			width: 80%;
+			margin: 20px;
+		}
+		#time .ui-slider-range { background: #729fcf; }
+		#time .ui-slider-handle { border-color: #729fcf; }
