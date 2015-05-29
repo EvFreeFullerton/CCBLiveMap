@@ -279,7 +279,7 @@
 <?php
 	include 'menu.php';
 ?>
-	<div><object id="map-svg" width="80%" height="80%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object></div><br><br>
+	<div><object id="map-svg" width="100%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object></div><br><br>
 	<div id="timeText">10 AM</div> <select id='modeSelect' onchange="modeChange()"><option value='live'>Live</option><option value='manual'>Time Slider</option></select><br>
 	<div id="time"></div>
   <div id="mouseTooltip" >Event</div>

@@ -167,7 +167,7 @@
 <?php
 	include 'menu.php';
 ?>
-	<div><object id="map-svg" title="HellO" width="80%" height="80%" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object></div><br>
+	<div><object id="map-svg" title="HellO" width="100%" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object></div><br>
 	<a href="index.html">Events Map</a>
 	<div id="test"></div>
   </body>
