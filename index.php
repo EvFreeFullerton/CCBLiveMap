@@ -13,7 +13,7 @@
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
-    <style type="text/css">
+     <style type="text/css">
 
       /* Sticky footer styles
       -------------------------------------------------- */
@@ -58,8 +58,9 @@
       -------------------------------------------------- */
       /* Not required for template or sticky footer method. */
 
-      #wrap > .container {
-        padding-top: 60px;
+      .container {
+        width: auto;
+        max-width: 680px;
       }
       .container .controls {
         margin: 20px 0;
