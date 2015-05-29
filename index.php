@@ -326,22 +326,31 @@
 			xmlhttp.send();
 		}
     </script>
-<title>Live Campus Map</title></head>
+	<title>Live Campus Map</title>
+</head>
   <body>
-<?php
-	include 'menu.php';
-?>
-	<div><object id="map-svg" width="100%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
+		<?php
+			include 'menu.php';
+		?>
+		<div>
+			<object id="map-svg" width="100%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
+		</div>
 
-    <div id="footer">
-      <div class="container">
-        <p class="muted controls">
-					<div id="timeText">10 AM</div> <select id='modeSelect' onchange="modeChange()"><option value='live'>Live</option><option value='manual'>Time Slider</option></select><br>
+		<div id="footer">
+			<div class="containe-fluid">
+			<div class="row-fluid">
+					<div class="span1">
+						<div id="timeText">10 AM</div>
+					</div>
+					<div class="span3">
+						<select id='modeSelect' onchange="modeChange()"><option value='live'>Live</option><option value='manual'>Time Slider</option></select>
+					</div>
+				<div class="span8">
 					<div id="time"></div>
-				  <div id="mouseTooltip" >Event</div>
-				</p>
-        </div>
-    </div>
+					<div id="mouseTooltip" >Event</div>
+				</div>
+			</div>
+		</div>
 
   <script src="js/bootstrap.min.js"></script>
   </body>
