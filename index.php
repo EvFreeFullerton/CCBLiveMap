@@ -1,6 +1,23 @@
 	<html>
 	<head>
 
+
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+
+
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="scripts/jquery-ui-1.11.4.custom/jquery-ui.css">
 	<script src="scripts/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
@@ -270,5 +287,6 @@
 	<div id="timeText">10 AM</div> <select id='modeSelect' onchange="modeChange()"><option value='live'>Live</option><option value='manual'>Time Slider</option></select><br>
 	<div id="time"></div>
   <div id="mouseTooltip" >Event</div>
+  <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
