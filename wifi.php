@@ -25,7 +25,7 @@
 
 		function elementMouseOver(e){
 			var mapPos = getPos(document.getElementById("map-svg"));
-			var temp = this.getAttributeNS(null, "temperature");
+			var temp = this.getAttributeNS(null, "tooltip");
 			document.getElementById("mouseTooltip").innerHTML = temp;
 			document.getElementById("mouseTooltip").style.opacity = 1;
 			document.getElementById("mouseTooltip").style.left = e.clientX + mapPos.x + 15;
@@ -75,35 +75,6 @@
 			SVGElement.setAttributeNS(null, "style",  currentStyle + ";pointer-events:none");
 		}
 
-
-		var resetStyles = function (){
-            var svg = document.getElementById("map-svg");
-            var svgDoc = svg.contentDocument;
-            var all = svgDoc.getElementsByTagName("*");
-            for(var i=0; i < all.length; i++) {
-                if (all[i].id != null && all[i].id.substring(0, 8) == "Resource") {
-					changeFill(all[i],"#aaaaaa");
-                }
-				if (all[i].id != null && all[i].tagName.toLowerCase() == "text") {
-					ignoreMouse(all[i]);
-                }
-            }
-		}
-
-		function changeElementColor(name, color, temperature){
-		     var svg = document.getElementById("map-svg");
-            var svgDoc = svg.contentDocument;
-            var all = svgDoc.getElementsByTagName("*");
-            for(var i=0; i < all.length; i++) {
-                if (all[i].id != null && all[i].id.substring(0, 8) == "Resource") {
-					if(all[i].id == name){
-						changeFill(all[i],color);
-						all[i].setAttributeNS(null, "temperature",  temperature);
-						}
-                }
-            }
-		}
-
 		function changeElementText(name, textV){
 		     var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
@@ -112,32 +83,23 @@
 		}
 
 		function mapLoaded() {
-			resetStyles();
 			getRooms();
+			window.setInterval("getRooms",5*60*1000)
 		}
-
-		function getTemp(area)
+		
+		function setupTooltip(AP, text)
 		{
-			for(var i=0;i<thermostatData.length; i++){
-				if(thermostatData[i].name == area)
-					return thermostatData[i].currentTemp;
-			}
-			return 0;
-		}
-
-		function componentToHex(c) {
-			var hex = c.toString(16);
-			return hex.length == 1 ? "0" + hex : hex;
-		}
-
-		function setupRoom(resource, thermostat){
-			var temperature = getTemp(thermostat);
-			changeElementColor(resource, tempToColor(temperature),temperature);
 			var svg = document.getElementById("map-svg");
 			var svgDoc = svg.contentDocument;
-			element = svgDoc.getElementById(resource);
+			element = svgDoc.getElementById("AP"+AP+"txt");
 			element.addEventListener("mousemove",elementMouseOver);
 			element.addEventListener("mouseleave",mouseLeave);
+			element.setAttributeNS(null, "tooltip",  text);
+			
+			element = svgDoc.getElementById("AP"+AP+"Color");
+			element.addEventListener("mousemove",elementMouseOver);
+			element.addEventListener("mouseleave",mouseLeave);
+			element.setAttributeNS(null, "tooltip",  text);
 		}
 
 		function getRooms() {
@@ -153,9 +115,18 @@
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 					var SerReturn = xmlhttp.responseText;
 					wifiData = JSON.parse(SerReturn);
-
-					changeElementText("Wifi1",wifiData[0].totalUsers);
-
+					var total=0;
+					
+					for(var i = 0;i<wifiData.length;i++){
+						changeElementText("AP"+wifiData[i].mapID+"txt",wifiData[i].channelData[0]);
+						var tooltip = "<H5>"+wifiData[i].name+"</H5>"+"<b>"+wifiData[i].channelNames[0] +": " + wifiData[i].channelData[0]+"</b><br>";
+						total += Number(wifiData[i].channelData[0]);
+						for(var x = 1;x<wifiData[i].channelData.length;x++)
+							tooltip = tooltip + wifiData[i].channelNames[x] +": " + wifiData[i].channelData[x]+"<br>";
+						setupTooltip(wifiData[i].mapID,tooltip);
+					}
+					
+					changeElementText("wifiTotal",total);
 				}
 			}
 			xmlhttp.open("GET", "scripts/getWifi.php", true);
@@ -167,10 +138,10 @@
 <?php
 	include 'menu.php';
 ?>
-	<div><object id="map-svg" title="HellO" width="100%" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object></div><br>
+	<div><object id="map-svg" width="100%" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object></div><br>
 	<div id="test"></div>
   </body>
 
-<div id="mouseTooltip" >Temperature</div>
+<div id="mouseTooltip" >stats</div>
 
 </html>

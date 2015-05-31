@@ -6,20 +6,28 @@ require '../config/PRTGCredentials.php';
 
 class wifi implements JsonSerializable
 {
-	public $totalUsers;
 	public $name;
+	public $sensor;
+	public $channelNames;
+	public $channelData;
+	public $mapID;
 	
-	function __construct($APName, $sensor)
+	function __construct($APName, $sensor,$channelNames,$mapID)
 	{
-		updateUbntPoint($sensor,$this);
+		$this->channelData = updatePoint($sensor,$channelNames);
 		$this->name = $APName;
+		$this->sensor=$sensor;
+		$this->channelNames=$channelNames;
+		$this->mapID=$mapID;
 	}
 	
 	public function jsonSerialize()
 	{
 		return [
+				'mapID'=>$this->mapID,
 				'name' => $this->name,
-				'totalUsers' => $this->totalUsers
+				'channelNames' => $this->channelNames,
+				'channelData'=>$this->channelData
 			];
 	}
 }
@@ -39,21 +47,42 @@ function getSslPage($url) {
 }
 
 //4031
-function updateUbntPoint($sensorid, $object)
+function updatePoint($sensorid, $items)
 {
 	$url = 'http://powervault2/api/table.xml?id='.$sensorid.'&content=channels&columns=name,sensor,lastvalue&username='. PRTGCredentials()['user'].'&passhash='.PRTGCredentials()['passwordHash'];
+	
 	$string = getSslPage($url);
 	$XMLdata = simplexml_load_string($string);
-	$object->totalUsers = preg_replace('/\s+|Users/','',$XMLdata->item[4]->lastvalue);
+	
+	$ret = array();
+	for($x=0;$x<count($items);$x++)
+	{
+		for($y=0;$y<count($XMLdata->item);$y++){
+			if(strtolower($items[$x]) == strtolower($XMLdata->item[$y]->name))
+			{
+				array_push($ret,preg_replace('/\s+|Users/','',$XMLdata->item[$y]->lastvalue));
+			}
+		}
+	}
+	return $ret;
 }
 
-$thermostats = array();
+$APs = array();
+$row = 0;
+if (($handle = fopen("../config/APs.txt", "r")) !== FALSE) {
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+        $num = count($data);
+        $row++;
+		$channelNames = array();
+        for ($c=3; $c < $num; $c++) {
+            array_push($channelNames,$data[$c]);
+        }
+		array_push($APs,new wifi($data[1],$data[2],$channelNames,$data[0]));
+    }
+    fclose($handle);
+}
 
-$ABldg2East = new wifi("A Building - East 2nd Floor Hallway","3572");
-array_push($thermostats, $ABldg2East);
-
-
-echo json_encode($thermostats);
+echo json_encode($APs);
 
 ?>
 

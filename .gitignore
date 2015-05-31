@@ -8,3 +8,4 @@
 config/CCBCredentials - SAMPLE.php
 config/PRTGCredentials - SAMPLE.php
 config/MySQLCredentials - SAMPLE.php
+config/APs.txt
