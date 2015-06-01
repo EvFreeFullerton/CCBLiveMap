@@ -107,6 +107,7 @@
 		function mapLoaded() {
 			resetStyles();
 			getRooms();
+			setInterval(getRooms,5*60*1000);
 		}
 
 		function getTemp(area)

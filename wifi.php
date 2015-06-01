@@ -84,9 +84,9 @@
 
 		function mapLoaded() {
 			getRooms();
-			window.setInterval("getRooms",5*60*1000)
+			setInterval(getRooms,5*60*1000);
 		}
-		
+				
 		function setupTooltip(AP, text)
 		{
 			var svg = document.getElementById("map-svg");
