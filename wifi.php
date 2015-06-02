@@ -203,9 +203,7 @@
 					</div>
 					<br>
 					<div id="test"></div>
-
+			<div id="mouseTooltip" >stats</div>
 			</div>
-
 </body>
-					<div id="mouseTooltip" >stats</div>
 </html>

@@ -79,12 +79,12 @@
 		var currentTime;
 		var liveRefreshInterval;
 		var lastEventDataRefresh;
-		
+
 		var originX = 0;
 		var originY = 0;
 		var originWidth = 10;
 		var originHeight = 10;
-		
+
 		var zoomInterval;
 		var currentX1;
 		var currentY1;
@@ -115,9 +115,9 @@
 			var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
             var all = svgDoc.getElementById("svg2");
-			
+
 			currentPos = all.getAttributeNS(null,"viewBox").split(" ");
-			
+
 			currentX1 = Number(currentPos[0]);
 			currentY1 = Number(currentPos[1]);
 			currentWidth=Number(currentPos[2]);
@@ -134,24 +134,24 @@
 			zoomInterval = setInterval(viewboxZoom,interval);
 
 		}
-		
+
 		function zoomToElement(elementName)
 		{
 			var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
             var element = svgDoc.getElementById(elementName);
-			
+
 			elementX = Number(element.getAttributeNS(null, "x"));
 			elementY = Number(element.getAttributeNS(null, "y"));
 			width = Number(element.getAttributeNS(null, "width"));
 			height = Number(element.getAttributeNS(null,"height"));
-			
+
 			elementX = elementX - 114.37822;
 			elementY = elementY - 328.77637;
-			
+
 			modifyBox(elementX,elementY,width,height);
 		}
-		
+
 		function getPos(el) {
 			for (var lx=0, ly=0;
 			el != null;
@@ -273,7 +273,7 @@
 		}
 
 		function mapLoaded() {
-			
+
 			var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
             var all = svgDoc.getElementById("svg2");
@@ -282,7 +282,7 @@
 			originY = Number(currentPos[1]);
 			originWidth=Number(currentPos[2]);
 			originHeight=Number(currentPos[3]);
-			
+
 			resetStyles();
 			sliderToCurrentTime();
 			getRooms();
@@ -352,12 +352,12 @@
 
 			manualMode();
 		}
-		
+
 		function sliderX2Change(){
-			 
+
 			modifyBox($("#x1").slider("value"),$("#y1").slider("value"),$("#x2").slider("value"),$("#y2").slider("value"));
 		}
-		
+
 		function zoomToRandomRegion(){
 			var svg = document.getElementById("map-svg");
 			var svgDoc = svg.contentDocument;
@@ -366,7 +366,7 @@
 
 			if(!document.getElementById("zoomCheckBox").checked)
 				return;
-			
+
 			if(events == null)
 				return;
 
@@ -376,8 +376,8 @@
 					continue;
 				}
 				ActiveIds.push(all[i].id);
-			}		
-			
+			}
+
 			var gotoIndex = Math.floor((ActiveIds.length+1)*Math.random());
 			if(gotoIndex == 0)
 				modifyBox(originX,originY,originWidth,originHeight);
@@ -385,7 +385,7 @@
 				zoomToElement(ActiveIds[gotoIndex-1]);
 			}
 		}
-		
+
 		function zoomBoxChanged()
 		{
 			var checkbox = document.getElementById("zoomCheckBox");
@@ -453,29 +453,23 @@
     </script>
 	<title>Live Campus Map</title>
 </head>
-  <body>
-    <div id="wrap">
+<body>
+	<div id="wrap">
 		<?php
 			include 'menu.php';
 		?>
       <!-- Begin page content -->
-      <div class="container">
-
-					<div>
-						<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
-					</div>
-
-      </div>
-
+	<div class="container">
+		<div>
+			<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
+		</div>
+	</div>
  	<div id="push"></div>
 	<div id="footer">
 		<div class="container">
-
 			<div class="container-fluid">
 				<div class="row-fluid">
-
 					<div class="span12">
-
 						<div class="span4">
 							<div id="timeText">10 AM</div>
 						</div>
@@ -491,20 +485,14 @@
 					</div>
 						<div class="span12">
 							<div id="time"></div>
-
 							<div id="mouseTooltip" >Event</div>
 						</div>
-
 					</div>
-
 				</div>
 			</div>
-
 		</div>
-
-		</div>
-
-  <script src="js/bootstrap.min.js"></script>
 	</div>
-  </body>
+</div>
+<script src="js/bootstrap.min.js"></script>
+</body>
 </html>
