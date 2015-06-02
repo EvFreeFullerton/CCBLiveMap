@@ -1,9 +1,9 @@
-	<html>
+<html>
 	<head>
     <link href="css/bootstrap.css" rel="stylesheet">
     <style>
       body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-top: 80px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -12,6 +12,63 @@
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
+
+     <style type="text/css">
+
+      /* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 80px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+ /*         margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+*/
+        }
+      }
+
+
+
+      /* Custom page CSS
+      -------------------------------------------------- */
+      /* Not required for template or sticky footer method. */
+
+      .container {
+        width: auto;
+        max-width: 680px;
+      }
+      .container .controls {
+        margin: 20px 0;
+      }
+
+    </style>
+
 	<link rel="stylesheet" href="style.css">
 	<script>
 		var wifiData;
@@ -86,7 +143,7 @@
 			getRooms();
 			setInterval(getRooms,5*60*1000);
 		}
-				
+
 		function setupTooltip(AP, text)
 		{
 			var svg = document.getElementById("map-svg");
@@ -95,7 +152,7 @@
 			element.addEventListener("mousemove",elementMouseOver);
 			element.addEventListener("mouseleave",mouseLeave);
 			element.setAttributeNS(null, "tooltip",  text);
-			
+
 			element = svgDoc.getElementById("AP"+AP+"Color");
 			element.addEventListener("mousemove",elementMouseOver);
 			element.addEventListener("mouseleave",mouseLeave);
@@ -116,7 +173,7 @@
 					var SerReturn = xmlhttp.responseText;
 					wifiData = JSON.parse(SerReturn);
 					var total=0;
-					
+
 					for(var i = 0;i<wifiData.length;i++){
 						changeElementText("AP"+wifiData[i].mapID+"txt",wifiData[i].channelData[0]);
 						var tooltip = "<H5>"+wifiData[i].name+"</H5>"+"<b>"+wifiData[i].channelNames[0] +": " + wifiData[i].channelData[0]+"</b><br>";
@@ -125,7 +182,7 @@
 							tooltip = tooltip + wifiData[i].channelNames[x] +": " + wifiData[i].channelData[x]+"<br>";
 						setupTooltip(wifiData[i].mapID,tooltip);
 					}
-					
+
 					changeElementText("wifiTotal",total);
 				}
 			}
@@ -138,10 +195,17 @@
 <?php
 	include 'menu.php';
 ?>
-	<div><object id="map-svg" width="100%" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object></div><br>
-	<div id="test"></div>
-  </body>
+      <!-- Begin page content -->
+      <div class="container">
 
-<div id="mouseTooltip" >stats</div>
+					<div>
+						<object id="map-svg" width="100%" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object>
+					</div>
+					<br>
+					<div id="test"></div>
 
+			</div>
+
+</body>
+					<div id="mouseTooltip" >stats</div>
 </html>
