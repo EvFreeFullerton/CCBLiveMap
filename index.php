@@ -364,7 +364,7 @@
 			var all = svgDoc.getElementsByTagName("*");
 			var ActiveIds = [];
 
-			if(!document.getElementById("zoomCheckBox"))
+			if(!document.getElementById("zoomCheckBox").checked)
 				return;
 			
 			if(events == null)
