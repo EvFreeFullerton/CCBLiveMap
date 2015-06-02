@@ -383,7 +383,6 @@
 				modifyBox(originX,originY,originWidth,originHeight);
 			else{
 				zoomToElement(ActiveIds[gotoIndex-1]);
-				document.title = ActiveIds[gotoIndex-1];
 			}
 		}
 		
