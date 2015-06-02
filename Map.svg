@@ -27,14 +27,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="392.56128"
+     inkscape:cx="589.72738"
      inkscape:cy="361.66383"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2048"
-     inkscape:window-height="1130"
-     inkscape:window-x="1272"
+     inkscape:window-width="1280"
+     inkscape:window-height="962"
+     inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:snap-text-baseline="true"
@@ -1997,5 +1997,61 @@
        d="m 139.48051,939.28907 63.28606,0"
        id="path4440"
        inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.17681254;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="Region"
+       width="341.02319"
+       height="186.02319"
+       x="113.36662"
+       y="382.83746"
+       inkscape:label="#rect3638" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.19259579;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="Region879"
+       width="587.00739"
+       height="471.00742"
+       x="107.37452"
+       y="611.8454"
+       inkscape:label="#rect4440" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.18946935;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="Region2437"
+       width="358.01053"
+       height="243.01053"
+       x="718.37299"
+       y="620.84381"
+       inkscape:label="#rect4442" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.18751884;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="Region234"
+       width="199.01248"
+       height="254.01247"
+       x="719.37201"
+       y="344.8428"
+       inkscape:label="#rect4444" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.17484891;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="Region0645"
+       width="100.02515"
+       height="258.02515"
+       x="979.36572"
+       y="343.83646"
+       inkscape:label="#rect4446" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="Region242"
+       width="218"
+       height="201"
+       x="454.37823"
+       y="396.84906"
+       inkscape:label="#rect4448" />
+    <rect
+       style="display:inline;fill:none;fill-opacity:1;stroke:none;stroke-width:0.30923516;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;enable-background:new"
+       id="Region1"
+       width="577.89075"
+       height="237.89075"
+       x="108.93287"
+       y="369.90372"
+       inkscape:label="#rect4444-8" />
   </g>
 </svg>

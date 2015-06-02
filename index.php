@@ -79,7 +79,79 @@
 		var currentTime;
 		var liveRefreshInterval;
 		var lastEventDataRefresh;
+		
+		var originX = 0;
+		var originY = 0;
+		var originWidth = 10;
+		var originHeight = 10;
+		
+		var zoomInterval;
+		var currentX1;
+		var currentY1;
+		var currentWidth;
+		var currentHeight;
+		var destinationX1;
+		var destinationY1;
+		var destinationWidth;
+		var destinationHeight;
+		var progress;
+		var svgMaster;
+		var dp;
 
+		function viewboxZoom()
+		{
+			newX = (destinationX1-currentX1)*progress + currentX1;
+			newY = (destinationY1-currentY1)*progress + currentY1;
+			newWidth = (destinationWidth-currentWidth)*progress +currentWidth;
+			newHeight = (destinationHeight-currentHeight)*progress +currentHeight;
+			svgMaster.setAttributeNS(null, "viewBox",newX+" "+newY+" "+newWidth+" "+newHeight);
+			if(progress >= 1)
+				clearInterval(zoomInterval);
+			progress = progress + dp;
+		}
+
+		function modifyBox(x1,y1,width,height)
+		{
+			var svg = document.getElementById("map-svg");
+            var svgDoc = svg.contentDocument;
+            var all = svgDoc.getElementById("svg2");
+			
+			currentPos = all.getAttributeNS(null,"viewBox").split(" ");
+			
+			currentX1 = Number(currentPos[0]);
+			currentY1 = Number(currentPos[1]);
+			currentWidth=Number(currentPos[2]);
+			currentHeight=Number(currentPos[3]);
+			destinationX1 = x1;
+			destinationY1 = y1;
+			destinationWidth = width;
+			destinationHeight = height;
+			progress = 0;
+			duration = 2000;
+			interval = 20;
+			svgMaster = all;
+			dp = interval/duration;
+			zoomInterval = setInterval(viewboxZoom,interval);
+
+		}
+		
+		function zoomToElement(elementName)
+		{
+			var svg = document.getElementById("map-svg");
+            var svgDoc = svg.contentDocument;
+            var element = svgDoc.getElementById(elementName);
+			
+			elementX = Number(element.getAttributeNS(null, "x"));
+			elementY = Number(element.getAttributeNS(null, "y"));
+			width = Number(element.getAttributeNS(null, "width"));
+			height = Number(element.getAttributeNS(null,"height"));
+			
+			elementX = elementX - 114.37822;
+			elementY = elementY - 328.77637;
+			
+			modifyBox(elementX,elementY,width,height);
+		}
+		
 		function getPos(el) {
 			for (var lx=0, ly=0;
 			el != null;
@@ -201,12 +273,23 @@
 		}
 
 		function mapLoaded() {
+			
+			var svg = document.getElementById("map-svg");
+            var svgDoc = svg.contentDocument;
+            var all = svgDoc.getElementById("svg2");
+			currentPos = all.getAttributeNS(null,"viewBox").split(" ");
+			originX = Number(currentPos[0]);
+			originY = Number(currentPos[1]);
+			originWidth=Number(currentPos[2]);
+			originHeight=Number(currentPos[3]);
+			
 			resetStyles();
 			sliderToCurrentTime();
 			getRooms();
 			refreshMap();
 			LiveMode();
 			window.setInterval(eventDataRefreshCallback,30000);
+			window.setInterval(zoomToRandomRegion,10000);
 		}
 
 		$(function() {
@@ -221,9 +304,7 @@
 			$("#time").draggable();
 		});
 
-		$( "#time" ).slider({
-			range: false
-		});
+		$( "#time" ).slider({range: false});
 
 		function LiveMode(){
 			document.getElementById('modeSelect').value = 'live';
@@ -270,6 +351,49 @@
 			refreshMap();
 
 			manualMode();
+		}
+		
+		function sliderX2Change(){
+			 
+			modifyBox($("#x1").slider("value"),$("#y1").slider("value"),$("#x2").slider("value"),$("#y2").slider("value"));
+		}
+		
+		function zoomToRandomRegion(){
+			var svg = document.getElementById("map-svg");
+			var svgDoc = svg.contentDocument;
+			var all = svgDoc.getElementsByTagName("*");
+			var ActiveIds = [];
+
+			if(!document.getElementById("zoomCheckBox"))
+				return;
+			
+			if(events == null)
+				return;
+
+			for (var i = 0; i < all.length; i++) {
+
+				if (all[i].id == null || all[i].id.substring(0, 6) != "Region"){
+					continue;
+				}
+				ActiveIds.push(all[i].id);
+			}		
+			
+			var gotoIndex = Math.floor((ActiveIds.length+1)*Math.random());
+			if(gotoIndex == 0)
+				modifyBox(originX,originY,originWidth,originHeight);
+			else{
+				zoomToElement(ActiveIds[gotoIndex-1]);
+				document.title = ActiveIds[gotoIndex-1];
+			}
+		}
+		
+		function zoomBoxChanged()
+		{
+			var checkbox = document.getElementById("zoomCheckBox");
+			if(checkbox.checked)
+				zoomToRandomRegion();
+			else
+				modifyBox(originX,originY,originWidth,originHeight);
 		}
 
 	   function refreshMap() {
@@ -362,9 +486,13 @@
 								<option value='manual'>Time Slider</option>
 							</select>
 						</div>
+						<div>
+							<input type="checkbox" id="zoomCheckBox" checked="true" onchange="zoomBoxChanged()">Random Zooming</input>
+						</div>
 					</div>
 						<div class="span12">
 							<div id="time"></div>
+
 							<div id="mouseTooltip" >Event</div>
 						</div>
 
@@ -374,7 +502,8 @@
 			</div>
 
 		</div>
-	</div>
+
+		</div>
 
   <script src="js/bootstrap.min.js"></script>
 	</div>
