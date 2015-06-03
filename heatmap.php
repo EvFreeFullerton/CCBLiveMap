@@ -86,8 +86,8 @@
 			var temp = this.getAttributeNS(null, "temperature");
 			document.getElementById("mouseTooltip").innerHTML = temp;
 			document.getElementById("mouseTooltip").style.opacity = 1;
-			document.getElementById("mouseTooltip").style.left = e.clientX + mapPos.x + 15;
-			document.getElementById("mouseTooltip").style.top = e.clientY + mapPos.y + 15;
+			document.getElementById("mouseTooltip").style.left = e.clientX + mapPos.x + 15 + "px";
+			document.getElementById("mouseTooltip").style.top = e.clientY + mapPos.y + 15 + "px";
 		}
 
 		function mouseLeave(){
