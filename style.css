@@ -22,7 +22,8 @@ ul {
     position: absolute;
     max-width: 8em;
     text-align:center;
-	transition: opacity .5s;
+		transition: opacity .5s;
+		z-index: 10;
 }
 
 		#mouseTooltip {
@@ -34,12 +35,13 @@ ul {
 			max-width: 20em;
 			text-align:center;
 			transition: opacity .5s;
+			z-index: 10;
 		}
 
 		#time{
 			float: left;
 			clear: left;
-			width: 80%;
+			width: 100%;
 			margin: 20px;
 		}
 		#time .ui-slider-range { background: #729fcf; }
