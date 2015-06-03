@@ -39,10 +39,8 @@ ul {
 		}
 
 		#time{
-			float: left;
-			clear: left;
 			width: 100%;
-			margin: 20px;
+			margin: 0px;
 		}
 		#time .ui-slider-range { background: #729fcf; }
 		#time .ui-slider-handle { border-color: #729fcf; }
