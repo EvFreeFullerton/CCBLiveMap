@@ -6,12 +6,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Live Map</a>
+          <a class="brand" href="#" data-toggle="pill">Live Map</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-							<li><a href="index.php">Event Map</a></li>
-							<li><a href="heatmap.php">AC Heat Map</a></li>
-							<li><a href="wifi.php">WiFi Usage Map</a></li>
+							<li><a href="index.php" data-toggle="pill">Event Map</a></li>
+							<li><a href="heatmap.php" data-toggle="pill">AC Heat Map</a></li>
+							<li><a href="wifi.php" data-toggle="pill">WiFi Usage Map</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
