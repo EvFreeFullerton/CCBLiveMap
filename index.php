@@ -1,11 +1,7 @@
 	<html>
 	<head>
     <link href="css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 80px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
+
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -13,60 +9,46 @@
       <script src="../assets/js/html5shiv.js"></script>
     <![endif]-->
 
-     <style type="text/css">
-
-      /* Sticky footer styles
-      -------------------------------------------------- */
-
-      html,
-      body {
-        height: 100%;
-        /* The html and body elements cannot have any padding or margin. */
-      }
-
-      /* Wrapper for page content to push down footer */
-      #wrap {
-        min-height: 100%;
-        height: auto !important;
-        height: 100%;
-        /* Negative indent footer by it's height */
-        margin: 0 auto -60px;
-      }
-
-      /* Set the fixed height of the footer here */
-      #push,
-      #footer {
-        height: 80px;
-      }
-      #footer {
-        background-color: #f5f5f5;
-      }
-
-      /* Lastly, apply responsive CSS fixes as necessary */
-      @media (max-width: 767px) {
-        #footer {
- /*         margin-left: -20px;
-          margin-right: -20px;
-          padding-left: 20px;
-          padding-right: 20px;
-*/
+     <style>
+        html, body {
+            height: 100%;
         }
-      }
+        footer {
+            color: #666;
+            padding: 17px 0 18px 0;
+            border-top: 1px solid #000;
+				}
+        #wrap {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto -150px;
+        }
+        .push {
+            height: 155px;
+        }
+        /* not required for sticky footer; just pushes hero down a bit */
+        #wrap > .container {
+            padding-top: 60px;
+        }
 
+        /* responsive footer fix by Aalaap Ghag */
+        @media (max-width: 767px) {
+            body {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
 
+            footer, #wrap {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
 
-      /* Custom page CSS
-      -------------------------------------------------- */
-      /* Not required for template or sticky footer method. */
-
-      .container {
-        width: auto;
-        max-width: 680px;
-      }
-      .container .controls {
-        margin: 20px 0;
-      }
-
+        .container {
+            max-width: 940px;
+        }
+        /* end responsive footer fix */
     </style>
 
 	<link rel="stylesheet" href="style.css">
@@ -451,6 +433,7 @@
 			xmlhttp.send();
 		}
     </script>
+
 	<title>Live Campus Map</title>
 </head>
 <body>
@@ -464,35 +447,22 @@
 			<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
 		</div>
 	</div>
- 	<div id="push"></div>
-	<div id="footer">
-		<div class="container">
-			<div class="container-fluid">
-				<div class="row-fluid">
-					<div class="span12">
-						<div class="span4">
-							<div id="timeText">10 AM</div>
-						</div>
-						<div class="span8">
-							<select id='modeSelect' onchange="modeChange()">
-								<option value='live'>Live</option>
-								<option value='manual'>Time Slider</option>
-							</select>
-						</div>
-						<div>
-							<input type="checkbox" id="zoomCheckBox" checked="true" onchange="zoomBoxChanged()">Random Zooming</input>
-						</div>
-					</div>
-						<div class="span12">
-							<div id="time"></div>
-							<div id="mouseTooltip" >Event</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+  <div class="push"><!--//--></div>
+</div> <!-- .wrapper -->
+
+<footer>
+	<div class="container">
+		<div id="timeText">10 AM</div>
+		<select id='modeSelect' onchange="modeChange()">
+		<option value='live'>Live</option>
+		<option value='manual'>Time Slider</option>
+		</select>
+		<input type="checkbox" id="zoomCheckBox" checked="true" onchange="zoomBoxChanged()">Random Zooming</input>
+		<div id="time"></div>
+		<div id="mouseTooltip" >Event</div>
 	</div>
-</div>
+</footer>
+
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
