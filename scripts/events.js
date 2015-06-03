@@ -173,8 +173,8 @@
 			var mapPos = getPos(document.getElementById("map-svg"));
 			document.getElementById("mouseTooltip").innerHTML = this.getAttributeNS(null, "customTooltip");
 			document.getElementById("mouseTooltip").style.opacity = 1;
-			document.getElementById("mouseTooltip").style.left = e.clientX + mapPos.x + 15;
-			document.getElementById("mouseTooltip").style.top = e.clientY + mapPos.y + 15;
+			document.getElementById("mouseTooltip").style.left = e.clientX + mapPos.x + 15 +"px";
+			document.getElementById("mouseTooltip").style.top = e.clientY + mapPos.y + 15 + "px";
 		}
 
 		var mouseLeave = function () {
