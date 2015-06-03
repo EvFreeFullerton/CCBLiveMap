@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+<<<<<<< HEAD
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
+=======
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+>>>>>>> Changed elements to make them more responsive
     <style>
       body {
         padding-top: 80px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> Changed elements to make them more responsive
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
