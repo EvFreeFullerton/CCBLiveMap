@@ -6,9 +6,10 @@
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <style>
       body {
-        padding-top: 80px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-top: 0px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
+
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
