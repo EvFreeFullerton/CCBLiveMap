@@ -484,7 +484,6 @@
 								<div class="row-fluid">
 									<div class="span12">
 											<div id="time"></div>
-											<div id="mouseTooltip" >Event</div>
 									</div> <!-- .span12 -->
 							</div><!-- .row-fluid -->
 
@@ -493,7 +492,7 @@
 					</div><!-- .row-fluid -->
 				</div> <!-- .container -->
 					</footer>
-
+											<div id="mouseTooltip" >Event</div>
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
