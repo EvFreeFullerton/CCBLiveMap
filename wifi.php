@@ -4,59 +4,8 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 80px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
 
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-     <style type="text/css">
-
-      /* Sticky footer styles
-      -------------------------------------------------- */
-
-      html,
-      body {
-        height: 100%;
-        /* The html and body elements cannot have any padding or margin. */
-      }
-
-      /* Wrapper for page content to push down footer */
-      #wrap {
-        min-height: 100%;
-        height: auto !important;
-        height: 100%;
-        /* Negative indent footer by it's height */
-        margin: 0 auto -60px;
-      }
-
-      /* Set the fixed height of the footer here */
-      #push,
-      #footer {
-        height: 80px;
-      }
-      #footer {
-        background-color: #f5f5f5;
-      }
-
-      /* Lastly, apply responsive CSS fixes as necessary */
-      @media (max-width: 767px) {
-        #footer {
- /*         margin-left: -20px;
-          margin-right: -20px;
-          padding-left: 20px;
-          padding-right: 20px;
-*/
-        }
-      }
-
-
+    <style type="text/css">
 
       /* Custom page CSS
       -------------------------------------------------- */
@@ -66,10 +15,6 @@
         width: auto;
         max-width: 680px;
       }
-      .container .controls {
-        margin: 20px 0;
-      }
-
     </style>
 
 	<link rel="stylesheet" href="style.css">
