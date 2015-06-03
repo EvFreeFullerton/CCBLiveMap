@@ -73,7 +73,7 @@
 	<script src="scripts/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
 	<script src="scripts/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
 	<script src="scripts/jquery.ui.touch-punch.min.js"></script>
-	<script src="scripts/events.js"></script>
+
 
 	<title>Live Campus Map</title>
 </head>
@@ -124,5 +124,6 @@
 			</footer>
 			<div id="mouseTooltip" >Event</div>
 <script src="js/bootstrap.min.js"></script>
+<script src="scripts/events.js"></script>
 </body>
 </html>
