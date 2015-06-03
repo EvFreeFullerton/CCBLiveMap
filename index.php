@@ -73,17 +73,17 @@
 	<title>Live Campus Map</title>
 </head>
 <body>
-	<div id="wrap">
-		<?php
-			include 'menu.php';
-		?>
-      <!-- Begin page content -->
+<div id="wrap">
+	<?php
+		include 'menu.php';
+	?>
+	<!-- Begin page content -->
 	<div class="container">
-		<div>
-			<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()" width="90%" height="90%"></object>
+			<div>
+				<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()" width="90%" height="90%"></object>
+			</div>
 		</div>
-	</div>
-  <div class="push"><!--//--></div>
+<div class="push"><!--//--></div>
 </div> <!-- end .wrapper -->
 
 

@@ -246,18 +246,20 @@
 		}
     </script>
 <title>Campus Temperatures</title></head>
-  <body>
-<?php
-	include 'menu.php';
-?>
-  <!-- Begin page content -->
+<body>
+<div id="wrap">
+	<?php
+		include 'menu.php';
+	?>
+	<!-- Begin page content -->
 	<div class="container">
-			<div>
-				<object id="map-svg" title="HellO" width="100%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
-			</div>
-			<br>
-			<div id="test"></div>
-			<div id="mouseTooltip" >Temperature</div>
-	</div>
+		<div>
+			<object id="map-svg" title="HellO" width="100%" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
+		</div>
+		<br>
+		<div id="test"></div>
+		<div id="mouseTooltip" >Temperature</div>
+	</div> <!-- end .container -->
+</div> <!-- end .wrap -->
 </body>
 </html>

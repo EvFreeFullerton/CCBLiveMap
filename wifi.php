@@ -139,19 +139,20 @@
 		}
     </script>
 <title>Campus WiFi Usage</title></head>
-  <body>
-<?php
-	include 'menu.php';
-?>
-      <!-- Begin page content -->
-      <div class="container">
-
-					<div>
-						<object id="map-svg" width="100%" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object>
-					</div>
-					<br>
-					<div id="test"></div>
-			<div id="mouseTooltip" >stats</div>
+<body>
+	<div id="wrap">
+		<?php
+			include 'menu.php';
+		?>
+		<!-- Begin page content -->
+		<div class="container">
+			<div>
+				<object id="map-svg" width="100%" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object>
 			</div>
+			<br>
+			<div id="test"></div>
+			<div id="mouseTooltip" >stats</div>
+		</div> <!-- end .container -->
+	</div> <!-- end .wrap -->
 </body>
 </html>
