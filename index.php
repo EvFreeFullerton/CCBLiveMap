@@ -70,7 +70,7 @@
 	<script src="scripts/jquery.ui.touch-punch.min.js"></script>
 
 
-	<title>Live Campus Map</title>
+<title>Live Campus Map</title>
 </head>
 <body>
 <div id="wrap">
@@ -84,7 +84,7 @@
 			</div>
 		</div>
 <div class="push"><!--//--></div>
-</div> <!-- end .wrapper -->
+</div> <!-- end .wrap -->
 
 
 					<footer>
@@ -110,7 +110,10 @@
 				</div> <!-- .container -->
 			</footer>
 			<div id="mouseTooltip" >Event</div>
+
 <script src="js/bootstrap.min.js"></script>
+
 <script src="scripts/events.js"></script>
+
 </body>
 </html>
