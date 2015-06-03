@@ -54,19 +54,11 @@
             }
 
             #time {
-<<<<<<< HEAD
             	height: 40px;
             }
 						#time .ui-slider-handle {
 						  height: 45px;
 						  width: 45px;
-=======
-		height: 40px;
-            }
-						#time .ui-slider-handle {
-						  height: 45px;
-						  width: 20px;
->>>>>>> Changed elements to make them more responsive
 						}
         }
 
