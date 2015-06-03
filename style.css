@@ -7,12 +7,18 @@ ul {
 
 #timeText{
 	font-size: 20px;
+	display: inline-block;
 }
 
 #map-svg{
 	max-width: 700px;
 	width: 100%;
 }
+
+.modeselect{
+	display: inline-block;
+}
+
 
 #wifimouseTooltip {
 	pointer-events: none;
@@ -50,7 +56,12 @@ ul {
 				margin-top: 0px !important;
 				padding-top: 0px !important;
 				max-width: 100% !important;
-				width: 100% !important;
-				height: 100% !important;
+				width: 90% !important;
+				height: 90% !important;
 			}
+			#timeText{
+				font-size: .8em;
+			}
+
+			select { width: 5em }
 }
