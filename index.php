@@ -21,6 +21,7 @@
 				 -moz-transform: scale(2); /* FF */
 				 -webkit-transform: scale(2); /* Safari and Chrome */
 				 -o-transform: scale(2); /* Opera */
+				 padding-left: 10px;
 				}
 
         footer {
@@ -50,8 +51,8 @@
             }
 
             footer, #wrap {
-                padding-left: 20px;
-                padding-right: 20px;
+                padding-left: 0px;
+                padding-right: 0px;
             }
 
             #time {
