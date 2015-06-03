@@ -33,7 +33,10 @@
         }
 
         /* responsive footer fix by Aalaap Ghag */
-        @media (max-width: 767px) {
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
             body {
                 padding-right: 0px;
                 padding-left: 0px;
