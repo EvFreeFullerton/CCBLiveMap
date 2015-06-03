@@ -44,3 +44,11 @@ ul {
 		}
 		#time .ui-slider-range { background: #729fcf; }
 		#time .ui-slider-handle { border-color: #729fcf; }
+
+@media (max-width: 767px) {
+			#map-svg{
+				max-width: 100% !important;
+				width: 100% !important;
+				height: 100% !important;
+			}
+}
