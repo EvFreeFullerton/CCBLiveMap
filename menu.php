@@ -1,3 +1,9 @@
+<script>
+    $(document).ready(function() {
+        $('#navitem a[href="' + this.location.pathname + '"]').parent().addClass('active');
+    });
+</script>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -9,9 +15,9 @@
           <a class="brand" href="#" data-toggle="pill">Live Map</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-							<li><a href="index.php" data-toggle="pill">Event Map</a></li>
-							<li><a href="heatmap.php" data-toggle="pill">AC Heat Map</a></li>
-							<li><a href="wifi.php" data-toggle="pill">WiFi Usage Map</a></li>
+							<li><a href="index.php" data-toggle="pill" class="navitem">Event Map</a></li>
+							<li><a href="heatmap.php" data-toggle="pill" class="navitem">AC Heat Map</a></li>
+							<li><a href="wifi.php" data-toggle="pill" class="navitem">WiFi Usage Map</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
