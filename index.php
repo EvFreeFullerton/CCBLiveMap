@@ -87,7 +87,7 @@
       <!-- Begin page content -->
 	<div class="container">
 		<div>
-			<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()" width="100%" height="100%"></object>
+			<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()" width="90%" height="90%"></object>
 		</div>
 	</div>
   <div class="push"><!--//--></div>
