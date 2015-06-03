@@ -454,6 +454,7 @@
 	<div class="container">
 		<div>
 			<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
+			<div id="mouseTooltip" >Event</div>
 		</div>
 	</div>
   <div class="push"><!--//--></div>
@@ -492,7 +493,7 @@
 					</div><!-- .row-fluid -->
 				</div> <!-- .container -->
 					</footer>
-											<div id="mouseTooltip" >Event</div>
+
 <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
