@@ -62,6 +62,8 @@
 		</div> <!-- end .container -->
 	</div> <!-- end .wrap -->
 
+<script src="js/bootstrap.min.js"></script>
+
 <script src="scripts/wifi.js"></script>
 
 </body>
