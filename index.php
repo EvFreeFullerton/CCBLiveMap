@@ -34,10 +34,7 @@
         }
 
         /* responsive footer fix by Aalaap Ghag */
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 568px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+				@media (max-width: 767px) {
             body {
                 padding-right: 0px;
                 padding-left: 0px;
@@ -460,20 +457,42 @@
 		</div>
 	</div>
   <div class="push"><!--//--></div>
-</div> <!-- .wrapper -->
+</div> <!-- end .wrapper -->
 
-<footer>
-	<div class="container">
-		<div id="timeText">10 AM</div>
-		<select id='modeSelect' onchange="modeChange()">
-		<option value='live'>Live</option>
-		<option value='manual'>Time Slider</option>
-		</select>
-		<input type="checkbox" id="zoomCheckBox" checked="true" onchange="zoomBoxChanged()">Random Zooming</input>
-		<div id="time"></div>
-		<div id="mouseTooltip" >Event</div>
-	</div>
-</footer>
+
+					<footer>
+						<div class="container">
+								<div class="row-fluid">
+									<div class="span12">
+
+
+										<div class="row-fluid">
+											<div class="span6">
+														<div id="timeText">10 AM</div>
+											</div><!-- .span6 -->
+											<div class="span3">
+														<select id='modeSelect' onchange="modeChange()">
+														<option value='live'>Live</option>
+														<option value='manual'>Time Slider</option>
+														</select>
+											</div><!-- .span6 -->
+											<div class="span3">
+													<input type="checkbox" id="zoomCheckBox" checked="true" onchange="zoomBoxChanged()">Random Zooming</input>
+											</div><!-- .span3 -->
+										</div><!-- .row-fluid -->
+
+								<div class="row-fluid">
+									<div class="span12">
+											<div id="time"></div>
+											<div id="mouseTooltip" >Event</div>
+									</div> <!-- .span12 -->
+							</div><!-- .row-fluid -->
+
+
+						</div><!-- .span12 -->
+					</div><!-- .row-fluid -->
+				</div> <!-- .container -->
+					</footer>
 
 <script src="js/bootstrap.min.js"></script>
 </body>

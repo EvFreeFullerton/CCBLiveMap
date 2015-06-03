@@ -5,6 +5,10 @@ ul {
     padding: 0;
 }
 
+select  {
+	width: 10em
+}
+
 #timeText{
 	font-size: 20px;
 }
