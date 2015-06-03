@@ -23,6 +23,10 @@
             padding: 0px 0 0px 0;
             border-top: 1px solid #000;
 				}
+				footer .container {
+            max-width: 100% !important;
+         }
+
         #wrap {
             min-height: 100%;
             height: auto !important;
@@ -91,12 +95,15 @@
 						<div class="container">
 								<div class="row"> <!-- Responsive 12 column grid -->
 									<div class="span12"> <!-- all 12 columns for this row -->
-														<div id="timeText">10 AM</div>
-														<select id='modeSelect' onchange="modeChange()">
-														<option value='live'>Live</option>
-														<option value='manual'>Time Slider</option>
-														</select>
-													<input type="checkbox" id="zoomCheckBox" checked="true" onchange="zoomBoxChanged()">Zooming</input>
+
+												<div id="timeText">10 AM</div>
+												<select id='modeSelect' onchange="modeChange()">
+												<option value='live'>Live</option>
+												<option value='manual'>Time Slider</option>
+												</select>
+
+											<input type="checkbox" id="zoomCheckBox" checked="true" onchange="zoomBoxChanged()">Zooming</input>
+
 									</div>
 								</div>
 								<div class="row"><!-- Responsive 12 column grid -->
