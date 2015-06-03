@@ -43,6 +43,14 @@
                 padding-left: 20px;
                 padding-right: 20px;
             }
+
+            #time {
+            	height: 60px;
+            }
+						#time .ui-slider-handle {
+						  height: 65px;
+						  width: 65px;
+						}
         }
 
         .container {
