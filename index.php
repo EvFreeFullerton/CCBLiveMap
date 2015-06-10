@@ -34,7 +34,7 @@
             margin: 0 auto -150px;
         }
         .push {
-            height: 155px;
+            height: 50px;
         }
         /* not required for sticky footer; just pushes hero down a bit */
         #wrap > .container {
@@ -42,7 +42,7 @@
         }
 
         /* responsive footer fix by Aalaap Ghag */
-				@media (max-width: 767px) {
+				@media  {
             body {
                 padding-left: 10px;
             }
@@ -55,16 +55,62 @@
             #time {
             	height: 40px;
             }
-						#time .ui-slider-handle {
-						  height: 45px;
-						  width: 45px;
-						}
+
+			#time .ui-slider-handle {
+				height: 45px;
+				width: 45px;
+			}
         }
 
         .container {
-            max-width: 940px;
+			display: flex;
         }
         /* end responsive footer fix */
+		.rightPaneContainer{
+			flex-grow:1;
+		}
+		.Map {
+			flex-grow:3;
+			border-radius: 10px;
+			border: 2px solid #8AC007;
+			margin:10px;
+			padding-left: 5px;
+			padding-right:5px;
+			padding-top:5px;
+			padding-bottom:5px;
+			}
+		.DatePickerContainer{
+			border-radius: 10px;
+			border: 2px solid #8AC007;
+			margin:10px;
+			max-width:300px;
+			padding-left: 5px;
+			padding-right: 5px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			text-align: center;
+		}
+		.EventList{
+			margin:10px;
+			border-radius: 10px;
+			border: 2px solid #8AC007;
+			height:500px;
+			overflow-y: scroll;
+			max-width:300px;
+		}
+		.Event {
+			transition: background-color .5s ease ;
+			margin: 3px;
+			padding-left: 5px;
+			padding-right: 5px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			border-radius: 10px;
+			border: 2px solid #000000;
+			background: #000000;
+			color: #FFFFFF;
+		}
+
     </style>
 
 	<link rel="stylesheet" href="style.css">
@@ -81,14 +127,19 @@
 	<?php
 		include 'menu.php';
 	?>
+<div class="push"><!--//--></div>
 	<!-- Begin page content -->
 	<div class="container">
-			<div>
-				<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()" width="90%" height="90%"></object>
-			</div>
+		<div class="Map">
+			<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
+			<div id="time"></div>
 		</div>
-<div class="push"><!--//--></div>
-</div> <!-- end .wrap -->
+		<div class="rightPaneContainer">
+			<div class="DatePickerContainer">Date: <input type="text" id="datepicker" onchange="newDate()"></div>
+			<div class="EventList" id="EventList">	</div>
+		</div>
+	</div>
+
 
 
 					<footer>
@@ -102,13 +153,14 @@
 												<option value='manual'>Time Slider</option>
 												</select>
 
-											<input type="checkbox" id="zoomCheckBox" checked="true" onchange="zoomBoxChanged()">Zooming</input>
+											<input type="checkbox" id="zoomCheckBox" onchange="zoomBoxChanged()">Zooming</input>
 
 									</div>
 								</div>
+
 								<div class="row"><!-- Responsive 12 column grid -->
 									<div class="span12"> <!-- Using all 12 columns -->
-											<div id="time"></div>
+											
 									</div> <!-- .span12 -->
 							</div><!-- .row-fluid -->
 
@@ -117,7 +169,7 @@
 				</div> <!-- .container -->
 			</footer>
 			<div id="mouseTooltip" >Event</div>
-
+</div> <!-- end .wrap -->
 <script src="js/bootstrap.min.js"></script>
 
 <script src="scripts/events.js"></script>

@@ -147,8 +147,14 @@
 		}
 
 		function fixObjectDates(element, index, array) {
-			array[index].startTime = Number(element.startTime);
-			array[index].endTime = Number(element.endTime);
+			var temp = $("#datepicker").datepicker('getDate');
+			temp.setHours(0);
+			temp.setMinutes(0);
+			temp.setSeconds(0);
+			temp.setMilliseconds(0);
+			
+			array[index].startTime = Number(element.startTime) - temp/1000;
+			array[index].endTime = Number(element.endTime) - temp/1000;
 			array[index].resources = JSON.parse(array[index].resources.replace(/ |\\|\/|\(|\)/g, '_'));
 		}
 
@@ -175,14 +181,18 @@
 			document.getElementById("mouseTooltip").style.opacity = 1;
 			document.getElementById("mouseTooltip").style.left = e.clientX + mapPos.x + 15 +"px";
 			document.getElementById("mouseTooltip").style.top = e.clientY + mapPos.y + 15 + "px";
+			var listItem = document.getElementById(this.getAttributeNS(null, "customId"));
+			listItem.style.backgroundColor='#00aa00';
+			document.getElementById('EventList').scrollTop = listItem.offsetTop - listItem.parentNode.offsetTop-10;
 		}
 
 		var mouseLeave = function () {
 			document.getElementById("mouseTooltip").style.opacity = 0;
+			var listItem = document.getElementById(this.getAttributeNS(null, "customId")).style.backgroundColor='black';
 		}
 
 		function sliderToCurrentTime(){
-			var temp = new Date();
+			var temp = $("#datepicker").datepicker('getDate');
 			temp.setHours(0);
 			temp.setMinutes(0);
 			temp.setSeconds(0);
@@ -192,7 +202,7 @@
 
 			document.getElementById("timeText").innerHTML  = new Date( Number(temp) + $("#time").slider("value")*1000).toLocaleTimeString();
 
-			currentTime = Number(temp)/1000 + $("#time").slider("value");
+			currentTime = $("#time").slider("value");
 		}
 
 		function mapLoaded() {
@@ -209,7 +219,6 @@
 			resetStyles();
 			sliderToCurrentTime();
 			getRooms();
-			refreshMap();
 			LiveMode();
 			window.setInterval(eventDataRefreshCallback,30000);
 			window.setInterval(zoomToRandomRegion,10000);
@@ -225,6 +234,8 @@
 				});
 			$( "#time" ).slider( "value", 36000 );
 			$("#time").draggable();
+			$( "#datepicker" ).datepicker();
+			$("#datepicker").datepicker('setDate', new Date());
 		});
 
 		$( "#time" ).slider({range: false});
@@ -243,8 +254,8 @@
 
 		//Refresh event data every 5 minutes or after midnight
 		function eventDataRefreshCallback(){
-			var currentTime = new Date();
-			if((Number(currentTime)-Number(lastEventDataRefresh)) > 5*60*1000 || (lastEventDataRefresh.getHours() == 23 && currentTime.getHours == 0)){
+			var currentTime2 = new Date();
+			if((Number(currentTime2)-Number(lastEventDataRefresh)) > 5*60*1000 || (lastEventDataRefresh.getHours() == 23 && currentTime2.getHours == 0)){
 				getRooms();
 			}
 		}
@@ -262,17 +273,16 @@
 		}
 
 		function sliderChange(){
-			var temp = new Date();
+			var temp = $("#datepicker").datepicker('getDate');
 			temp.setHours(0);
 			temp.setMinutes(0);
 			temp.setSeconds(0);
 			temp.setMilliseconds(0);
 			document.getElementById("timeText").innerHTML  = new Date( Number(temp) + $("#time").slider("value")*1000).toLocaleTimeString();
 
-			currentTime = Number(temp)/1000 + $("#time").slider("value");
+			currentTime = $("#time").slider("value");
 
 			refreshMap();
-
 			manualMode();
 		}
 
@@ -334,6 +344,13 @@
 
 				var newFill = "#aaaaaa";
 				var newTooltip = "";
+				var newId = "";
+				
+				var temp = $("#datepicker").datepicker('getDate');
+				temp.setHours(0);
+				temp.setMinutes(0);
+				temp.setSeconds(0);
+				temp.setMilliseconds(0);
 
 				for(var j=0;j<events.length;j++)
 				{
@@ -341,17 +358,48 @@
 						for(var k=0;k<events[j].resources.length;k++)
 							if (all[i].id != null && all[i].id.replace("Resource", "") == events[j].resources[k]){
 								newFill = "#00ff00";
-								newTooltip = events[j].name+"<br>"+(new Date( Number(events[j].startTime)*1000)).toLocaleTimeString()+" to "+(new Date( Number(events[j].endTime)*1000)).toLocaleTimeString();
+								newTooltip = events[j].name+"<br>"+(new Date(Number(temp)+ Number(events[j].startTime)*1000)).toLocaleTimeString()+" to "+(new Date(Number(temp)+ Number(events[j].endTime)*1000)).toLocaleTimeString();
+								newId = events[j].id;
 							}
 				}
 
 				all[i].setAttributeNS(null, "customTooltip", newTooltip);
+				all[i].setAttributeNS(null, "customId", newId);
 				changeOpacity(all[i],1);
 				changeFill(all[i],newFill);
 			}
 		}
+		
+		function refreshList(){
+			
+			var newHTML = "";
+			
+			var newEventList = document.createElement('test1');
+			
+			var temp = $("#datepicker").datepicker('getDate');
+			temp.setHours(0);
+			temp.setMinutes(0);
+			temp.setSeconds(0);
+			temp.setMilliseconds(0);
+			
+			for(var j=0;j<events.length;j++)
+			{
+				var newItemHTML = "<div class='Event' id='"+events[j].id+"'><div class='EventTitle'><b>"+events[j].name+"</b><br>"+(new Date( Number(temp)+ Number(events[j].startTime)*1000)).toLocaleTimeString()+" to "+(new Date( Number(temp)+ Number(events[j].endTime)*1000)).toLocaleTimeString()+"</div><div class='EventDescription'>"+events[j].description+"</div></div>";
+				newHTML = newHTML + newItemHTML;
+			}
+			
+			newEventList.innerHTML = newHTML;
+			document.getElementById("EventList").innerHTML="";
+			document.getElementById("EventList").appendChild(newEventList);
+		}
+		
+		function newDate(){
+			$("#datepicker").datepicker('hide');
+			date = 	$("#datepicker").datepicker('getDate');
+			getRooms(date);
+		}
 
-		function getRooms() {
+		function getRooms(date) {
 
 			if (window.XMLHttpRequest) {
 				// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -367,9 +415,17 @@
 					tempEvents.forEach(fixObjectDates);
 					events=tempEvents;
 					refreshMap();
+					refreshList();
 					lastEventDataRefresh=new Date();
 				}
+
 			}
-			xmlhttp.open("GET", "scripts/getToday.php", true);
+			
+			if(date == null)
+				xmlhttp.open("GET", "scripts/getToday.php", true);
+			else{
+				dest = "scripts/getDate.php?Year="+date.getFullYear().toString()+"&Month="+(date.getMonth()+1).toString()+"&Day="+date.getDate().toString();
+				xmlhttp.open("GET",dest, true);
+			}
 			xmlhttp.send();
 		}
