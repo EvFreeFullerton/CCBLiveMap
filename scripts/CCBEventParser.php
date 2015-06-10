@@ -3,6 +3,7 @@ require '../config/MySQLCredentials.php';
 
 class CalEvent implements JsonSerializable
 {
+	public $id;
 	public $name;
 	public $startTime;
 	public $endTime;
@@ -14,6 +15,7 @@ class CalEvent implements JsonSerializable
 	public function jsonSerialize()
 	{
 		return [
+				'id' => $this->id,
 				'name' => $this->name,
 				'startTime' => $this->startTime->format("U"),
 				'endTime' => $this->endTime->format("U"),
@@ -193,6 +195,7 @@ function getAllEventsInRange($startTime, $endTime, $sorted)
 	if ($result = $connect->query($query)) {
 		while ($row = $result->fetch_row()) {
 			$newEvent = new CalEvent();
+			$newEvent->id = $row[0];
 			$newEvent->startTime = date_create_from_format("Y-m-d H:i:s",$row[3]);
 			$newEvent->endTime = date_create_from_format("Y-m-d H:i:s",$row[4]);
 			$newEvent->resources = $row[7];
