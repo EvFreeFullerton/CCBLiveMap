@@ -62,10 +62,11 @@
 		function changeElementText(name, textV){
 		     var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
-            var all = svgDoc.getElementById(name);
-			all.innerHTML = all.innerHTML.replace(/>(\d)+<\/tspan>/,textV);
 			
-			//all.textContent= textV;
+			//Grabs the first tspan in the text element
+            var all = svgDoc.getElementById(name).childNodes[0];
+		
+			all.textContent= textV;
 		}
 
 		function mapLoaded() {
