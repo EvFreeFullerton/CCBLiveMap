@@ -46,7 +46,7 @@ ul {
 		}
 
 		#time{
-			width: 90%;
+			width: 100%;
 			margin: 0px;
 		}
 		#time .ui-slider-range { background: #729fcf; }

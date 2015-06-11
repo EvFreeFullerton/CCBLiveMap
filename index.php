@@ -20,8 +20,13 @@
 
         footer {
             color: #666;
+            background-color: white;
             padding: 0px 0 0px 0;
             border-top: 1px solid #000;
+				    position: absolute;
+				    left: 0;
+				    bottom: 0;
+				    z-index: 5000;
 				}
 				footer .container {
             max-width: 100% !important;
@@ -160,7 +165,6 @@
 	<div class="container">
 		<div class="Map span8">
 			<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
-			<div id="time"></div>
 		</div> <!-- /map -->
 		<div class="rightPaneContainer span-4">
 			<div class="DatePickerContainer"><input type="text" id="datepicker" onchange="newDate()"></div>
@@ -186,7 +190,7 @@
 
 								<div class="row"><!-- Responsive 12 column grid -->
 									<div class="span12"> <!-- Using all 12 columns -->
-
+										<div id="time"></div>
 									</div> <!-- .span12 -->
 							</div><!-- .row-fluid -->
 
