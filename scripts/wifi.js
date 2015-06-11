@@ -63,7 +63,9 @@
 		     var svg = document.getElementById("map-svg");
             var svgDoc = svg.contentDocument;
             var all = svgDoc.getElementById(name);
-			all.textContent= textV;
+			all.innerHTML = all.innerHTML.replace(/>(\d)+<\/tspan>/,textV);
+			
+			//all.textContent= textV;
 		}
 
 		function mapLoaded() {
