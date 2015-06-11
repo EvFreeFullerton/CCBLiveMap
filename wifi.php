@@ -16,7 +16,9 @@
             height: 100%;
             margin: 0 auto -150px;
         }
-
+        .push {
+            height: 50px;
+        }
         /* responsive footer fix by Aalaap Ghag */
 				@media (max-width: 767px) {
             body {
@@ -51,6 +53,7 @@
 		<?php
 			include 'menu.php';
 		?>
+		<div class="push"><!--//--></div>
 		<!-- Begin page content -->
 		<div class="container">
 			<div>
