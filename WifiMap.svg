@@ -22,7 +22,6 @@
   <defs
      id="defs4">
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient6001"
        osb:paint="gradient">
       <stop
@@ -55,7 +54,7 @@
        fx="1039.2341"
        fy="483.72894"
        r="36.144066"
-       gradientTransform="matrix(0.55732705,0,0,0.52899826,392.52965,142.35653)"
+       gradientTransform="matrix(0.55732705,0,0,0.52899826,394.02965,144.85653)"
        gradientUnits="userSpaceOnUse" />
     <radialGradient
        inkscape:collect="always"
@@ -99,7 +98,7 @@
        fx="1039.2341"
        fy="483.72894"
        r="36.144066"
-       gradientTransform="matrix(0.55732705,0,0,0.52899826,445.5849,258.6913)"
+       gradientTransform="matrix(0.55732705,0,0,0.52899826,422.0849,255.1913)"
        gradientUnits="userSpaceOnUse" />
     <radialGradient
        inkscape:collect="always"
@@ -412,24 +411,35 @@
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4565"
-       id="radialGradient4571-3-6-54"
+       id="radialGradient4571-3-6-12-4"
        cx="1039.2341"
        cy="483.72894"
        fx="1039.2341"
        fy="483.72894"
        r="36.144066"
-       gradientTransform="matrix(0.55732705,0,0,0.52899826,742.95583,299.74936)"
+       gradientTransform="matrix(0.55732705,0,0,0.52899826,476.68492,255.4573)"
        gradientUnits="userSpaceOnUse" />
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4565"
-       id="radialGradient4571-3-6-97"
+       id="radialGradient4571-3-6-12-9"
        cx="1039.2341"
        cy="483.72894"
        fx="1039.2341"
        fy="483.72894"
        r="36.144066"
-       gradientTransform="matrix(0.55732705,0,0,0.52899826,742.95583,345.85166)"
+       gradientTransform="matrix(0.55732705,0,0,0.52899826,448.68492,284.9573)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4565"
+       id="radialGradient4571-3-6-12-1"
+       cx="1039.2341"
+       cy="483.72894"
+       fx="1039.2341"
+       fy="483.72894"
+       r="36.144066"
+       gradientTransform="matrix(0.55732705,0,0,0.52899826,573.18492,124.9573)"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
@@ -440,13 +450,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2"
-     inkscape:cx="761.27607"
-     inkscape:cy="219.09715"
+     inkscape:cx="970.2608"
+     inkscape:cy="593.28235"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
-     inkscape:window-height="962"
+     inkscape:window-height="738"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -2402,23 +2412,23 @@
     <ellipse
        style="display:inline;fill:url(#radialGradient4571-3-6);fill-opacity:1;stroke:none;enable-background:new"
        id="AP1Color"
-       cx="971.7229"
-       cy="398.24829"
+       cx="973.2229"
+       cy="400.74829"
        rx="20.144066"
        ry="19.120148"
        inkscape:label="#path4555-3-7" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
-       x="971.59473"
-       y="403.71582"
+       x="973.09473"
+       y="406.21582"
        id="AP1txt"
        sodipodi:linespacing="125%"
        inkscape:label="#text3638"><tspan
          sodipodi:role="line"
          id="tspan3640-7"
-         x="971.59473"
-         y="403.71582">1</tspan></text>
+         x="973.09473"
+         y="406.21582">1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -2492,24 +2502,24 @@
          y="495.6554">4</tspan></text>
     <ellipse
        style="display:inline;fill:url(#radialGradient4571-3-6-12);fill-opacity:1;stroke:none;enable-background:new"
-       id="AP5Color"
-       cx="1024.7782"
-       cy="514.58307"
+       id="AP36Color"
+       cx="1001.2782"
+       cy="511.08307"
        rx="20.144066"
        ry="19.120148"
        inkscape:label="#path4555-3-7" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
-       x="1024.8588"
-       y="519.9444"
-       id="AP5txt"
+       x="1001.3588"
+       y="516.4444"
+       id="AP36txt"
        sodipodi:linespacing="125%"
        inkscape:label="#text3638"><tspan
          sodipodi:role="line"
          id="tspan3640-7-0"
-         x="1024.8588"
-         y="519.9444">5</tspan></text>
+         x="1001.3588"
+         y="516.4444">36</tspan></text>
     <ellipse
        style="display:inline;fill:url(#radialGradient4571-3-6-6);fill-opacity:1;stroke:none;enable-background:new"
        id="AP6Color"
@@ -3052,7 +3062,7 @@
          y="481.9704">32</tspan></text>
     <ellipse
        style="display:inline;fill:url(#radialGradient4571-3-6-37);fill-opacity:1;stroke:none;enable-background:new"
-       id="AP33Color"
+       id="AP35Color"
        cx="1137.149"
        cy="408.99725"
        rx="20.144066"
@@ -3063,53 +3073,13 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
        x="1137.182"
        y="414.45746"
-       id="AP33txt"
+       id="AP35txt"
        sodipodi:linespacing="125%"
        inkscape:label="#text3638"><tspan
          sodipodi:role="line"
          id="tspan3640-7-85"
          x="1137.182"
-         y="414.45746">33</tspan></text>
-    <ellipse
-       style="display:inline;fill:url(#radialGradient4571-3-6-54);fill-opacity:1;stroke:none;enable-background:new"
-       id="AP34Color"
-       cx="1322.149"
-       cy="555.64111"
-       rx="20.144066"
-       ry="19.120148"
-       inkscape:label="#path4555-3-7" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
-       x="1322.0026"
-       y="561.10132"
-       id="AP34txt"
-       sodipodi:linespacing="125%"
-       inkscape:label="#text3638"><tspan
-         sodipodi:role="line"
-         id="tspan3640-7-23"
-         x="1322.0026"
-         y="561.10132">34</tspan></text>
-    <ellipse
-       style="display:inline;fill:url(#radialGradient4571-3-6-97);fill-opacity:1;stroke:none;enable-background:new"
-       id="AP35Color"
-       cx="1322.149"
-       cy="601.74341"
-       rx="20.144066"
-       ry="19.120148"
-       inkscape:label="#path4555-3-7" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
-       x="1322.2369"
-       y="607.20361"
-       id="AP35txt"
-       sodipodi:linespacing="125%"
-       inkscape:label="#text3638"><tspan
-         sodipodi:role="line"
-         id="tspan3640-7-78"
-         x="1322.2369"
-         y="607.20361">35</tspan></text>
+         y="414.45746">35</tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot6562"
@@ -3159,5 +3129,73 @@
          x="811.01447"
          y="961.50116"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:125%;font-family:'Times New Roman';-inkscape-font-specification:'Times New Roman, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">Users:</tspan></text>
+    <ellipse
+       style="display:inline;fill:url(#radialGradient4571-3-6-12-4);fill-opacity:1;stroke:none;enable-background:new"
+       id="AP37Color"
+       cx="1055.8782"
+       cy="511.34906"
+       rx="20.144066"
+       ry="19.120148"
+       inkscape:label="#path4555-3-7" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
+       x="1055.4589"
+       y="517.21039"
+       id="AP37txt"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3638"><tspan
+         sodipodi:role="line"
+         id="tspan3640-7-0-3"
+         x="1055.4589"
+         y="517.21039">37</tspan></text>
+    <ellipse
+       style="display:inline;fill:url(#radialGradient4571-3-6-12-9);fill-opacity:1;stroke:none;enable-background:new"
+       id="AP5Color"
+       cx="1027.8782"
+       cy="540.84906"
+       rx="20.144066"
+       ry="19.120148"
+       inkscape:label="#path4555-3-7" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
+       x="1027.9589"
+       y="546.21039"
+       id="AP5txt"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3638"><tspan
+         sodipodi:role="line"
+         id="tspan3640-7-0-7"
+         x="1027.9589"
+         y="546.21039">5</tspan></text>
+    <ellipse
+       style="display:inline;fill:url(#radialGradient4571-3-6-12-1);fill-opacity:1;stroke:none;enable-background:new"
+       id="AP34Color"
+       cx="1152.3782"
+       cy="380.84906"
+       rx="20.144066"
+       ry="19.120148"
+       inkscape:label="#path4555-3-7" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
+       x="1152.4589"
+       y="386.21039"
+       id="AP34txt"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3638"><tspan
+         sodipodi:role="line"
+         id="tspan3640-7-0-4"
+         x="1152.4589"
+         y="386.21039">34</tspan></text>
+    <rect
+       style="display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.03490663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;enable-background:new"
+       id="asdf-9"
+       width="74.465096"
+       height="58.036518"
+       x="1098.8956"
+       y="366.58081"
+       inkscape:label="#rect4470-0" />
   </g>
 </svg>
