@@ -61,20 +61,22 @@
 				width: 45px;
 			}
         }
-
-        .container {
-			display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-			display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-			display: -ms-flexbox;      /* TWEENER - IE 10 */
-			display: -webkit-flex;     /* NEW - Chrome */
-			display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-        }
+/*
+      .container {
+				display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+				display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+				display: -ms-flexbox;      /* TWEENER - IE 10 */
+				display: -webkit-flex;     /* NEW - Chrome */
+				display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+/*
+      }
+*/
         /* end responsive footer fix */
 		.rightPaneContainer{
-			flex-grow:1;
+			/* flex-grow:1; */
 		}
 		.Map {
-			flex-grow:3;
+			/* flex-grow:3; */
 			border-radius: 10px;
 			border: 2px solid #8AC007;
 			margin:10px;
@@ -93,7 +95,12 @@
 			padding-top: 5px;
 			padding-bottom: 5px;
 			text-align: center;
+			min-width: 200px;
 		}
+		#datepicker{
+			max-width: 100px;
+		}
+
 		.EventList{
 			margin:10px;
 			border-radius: 10px;
@@ -101,6 +108,7 @@
 			height:500px;
 			overflow-y: scroll;
 			max-width:300px;
+			min-width: 200px;
 		}
 		.Event {
 			transition: background-color .5s ease ;
@@ -114,6 +122,22 @@
 			background: #000000;
 			color: #FFFFFF;
 		}
+
+		.zooming{
+			display: inline-block;
+			padding-left: 10px;
+			padding-top: 0px;
+			margin-top: 0px;
+		}
+		#zoomCheckBox{
+			padding-left: 10px;
+			margin-right: 10px;
+			margin-top: 0px;
+			padding-top: 0px;
+			text-align: top;
+		}
+
+
 
     </style>
 
@@ -134,15 +158,15 @@
 <div class="push"><!--//--></div>
 	<!-- Begin page content -->
 	<div class="container">
-		<div class="Map">
+		<div class="Map span8">
 			<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
 			<div id="time"></div>
-		</div>
-		<div class="rightPaneContainer">
-			<div class="DatePickerContainer">Date: <input type="text" id="datepicker" onchange="newDate()"></div>
+		</div> <!-- /map -->
+		<div class="rightPaneContainer span-4">
+			<div class="DatePickerContainer"><input type="text" id="datepicker" onchange="newDate()"></div>
 			<div class="EventList" id="EventList">	</div>
-		</div>
-	</div>
+		</div> <!-- /rightPaneContainer -->
+	</div> <!-- /container -->
 
 
 
@@ -150,21 +174,19 @@
 						<div class="container">
 								<div class="row"> <!-- Responsive 12 column grid -->
 									<div class="span12"> <!-- all 12 columns for this row -->
-
-												<div id="timeText">10 AM</div>
+												<input type="text" id="datepicker" onchange="newDate()">
+												<div id="timeText">Time</div>
 												<select id='modeSelect' onchange="modeChange()">
 												<option value='live'>Live</option>
 												<option value='manual'>Time Slider</option>
 												</select>
-
-											<input type="checkbox" id="zoomCheckBox" onchange="zoomBoxChanged()">Zooming</input>
-
+												<div class="zooming"><input type="checkbox" id="zoomCheckBox" onchange="zoomBoxChanged()">Zooming</input></div>
 									</div>
 								</div>
 
 								<div class="row"><!-- Responsive 12 column grid -->
 									<div class="span12"> <!-- Using all 12 columns -->
-											
+
 									</div> <!-- .span12 -->
 							</div><!-- .row-fluid -->
 

@@ -15,8 +15,9 @@ ul {
 	width: 100%;
 }
 
-.modeselect{
+#modeSelect{
 	display: inline-block;
+   width: 100px !important;
 }
 
 
