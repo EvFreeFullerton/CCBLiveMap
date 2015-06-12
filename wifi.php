@@ -14,21 +14,21 @@
 <title>Campus WiFi Usage</title>
 </head>
 <body>
-	<div id="wrap">
 		<?php
 			include 'menu.php';
 		?>
-		<div class="push"><!--//--></div>
-		<!-- Begin page content -->
+<div class="container-fluid">
+	<div id="wrap">
 		<div class="container">
 			<div>
-				<object id="map-svg" width="100%" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object>
+				<object id="map-svg" class="img-responsive" type="image/svg+xml" data="WifiMap.svg" onload="mapLoaded()"></object>
 			</div>
 			<br>
 			<div id="test"></div>
 			<div id="mouseTooltip" >stats</div>
 		</div> <!-- end .container -->
 	</div> <!-- end .wrap -->
+</div> <!-- end .container-fluid -->
 
 <script src="js/bootstrap.min.js"></script>
 

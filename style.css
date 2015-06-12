@@ -2,6 +2,8 @@ html,
 body
 {
     height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #wrap
@@ -9,6 +11,8 @@ body
     height: auto !important;
     height: 100%;
     min-height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 input[type=checkbox]
@@ -34,7 +38,7 @@ input[type=checkbox]
     padding-bottom: 5px;
     padding-left: 5px;
 
-    border: 2px solid #8ac007;
+    border: 2px solid black;
     /* flex-grow:3; */
     border-radius: 10px;
 }
@@ -50,8 +54,6 @@ input[type=checkbox]
     padding-left: 5px;
 
     text-align: center;
-
-    border: 2px solid #8ac007;
     border-radius: 10px;
 }
 
@@ -69,7 +71,7 @@ input[type=checkbox]
     height: 500px;
     margin: 10px;
 
-    border: 2px solid #8ac007;
+    border: 2px solid black;
     border-radius: 10px;
 }
 

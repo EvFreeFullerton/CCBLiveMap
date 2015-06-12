@@ -20,24 +20,23 @@
 	<title>Live Campus Map</title>
 </head>
 <body>
+	<?php
+	include 'menu.php';
+	?>
+
+<div class="container-fluid">
 	<div id="wrap">
-		<?php
-		include 'menu.php';
-		?>
-		<div class="push"><!--//--></div>
-		<!-- Begin page content -->
-		<div class="container">
-			<div class="Map col-md-8">
-				<object id="map-svg" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
-			</div> <!-- /map -->
-			<div class="rightPaneContainer col-md-4">
+		<div class="containter row">
+			<div class="col-md-8">
+				<object id="map-svg" class="img-responsive" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
+			</div> <!-- /col-md-8 -->
+			<div class="col-md-4">
 				<div class="DatePickerContainer"><input type="text" id="datepicker" onchange="newDate()"></div>
-				<div class="EventList" id="EventList">	</div>
-			</div> <!-- /rightPaneContainer -->
-		</div> <!-- /container -->
-
-
-
+				<div class="EventList" id="EventList"></div>
+			</div> <!-- /col-md-4 -->
+		</div> <!-- /row -->
+	</div> <!-- end .wrap -->
+</div> <!-- .containter-fluid -->
 
 
 	<nav class="navbar navbar-default navbar-fixed-bottom">
@@ -56,7 +55,6 @@
 
 
 	<div id="mouseTooltip" >Event</div>
-</div> <!-- end .wrap -->
 
 <script src="js/bootstrap.min.js"></script>
 <script src="scripts/events.js"></script>

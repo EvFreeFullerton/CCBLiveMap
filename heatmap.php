@@ -14,22 +14,21 @@
 <title>Campus Temperatures</title>
 </head>
 <body>
-<div id="wrap">
 	<?php
 		include 'menu.php';
 	?>
-	<!-- Begin page content -->
-	<div class="container">
-		<div>
-			<object id="map-svg" title="HellO" type="image/svg+xml" data="Map.svg" onload="mapLoaded()" width="90%" height="90%"></object>
-		</div>
-		<div id="test"></div>
-		<div id="mouseTooltip" >Temperature</div>
-	</div> <!-- end .container -->
-</div> <!-- end .wrap -->
+
+<div class="container-fluid">
+	<div id="wrap">
+		<object id="map-svg" class="img-responsive" title="HellO" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
+	</div>
+	<div id="test"></div>
+	<div id="mouseTooltip" >Temperature</div>
+		</div> <!-- end .wrap -->
+	</div> <!-- end .wrap -->
+</div> <!-- end .container-fluid -->
 
 <script src="js/bootstrap.min.js"></script>
-
 <script src="scripts/heatmap.js"></script>
 </body>
 </html>
