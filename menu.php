@@ -1,9 +1,7 @@
 <?php
 // Test if we're using this in the app or not
 //  index.php?menu=false
-if (isset($_GET['menu'])) {
-  if($_GET['menu'] != 'false') {
-}
+if(!isset($_GET['menu']) && $_GET['menu'] != 'false') {
 ?>
 
 <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
