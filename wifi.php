@@ -7,7 +7,9 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">	
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="scripts/jquery-ui-1.11.4.custom/jquery-ui.css">
-
+	<script src="scripts/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+	<script src="scripts/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	<script src="scripts/jquery.ui.touch-punch.min.js"></script>
 
 
 <title>Campus WiFi Usage</title>
@@ -29,9 +31,7 @@
 	</div> <!-- end .wrap -->
 </div> <!-- end .container-fluid -->
 
-	<script src="scripts/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
-	<script src="scripts/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
-	<script src="scripts/jquery.ui.touch-punch.min.js"></script>
+
 
 	<script src="js/bootstrap.min.js"></script>
 	<script src="scripts/wifi.js"></script>
