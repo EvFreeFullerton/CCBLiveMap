@@ -50,7 +50,13 @@
 			<option value='live'>Live</option>
 			<option value='manual'>Time Slider</option>
 		</select>
-		<div class="zooming"><input type="checkbox" id="zoomCheckBox" onchange="zoomBoxChanged()">Zooming</input></div>
+		<div class="zooming">
+			<div class="btn-group" data-toggle="buttons">
+			  <label class="btn btn-primary btn-xs">
+			    <input type="checkbox" id="zoomCheckBox" autocomplete="off" onchange="zoomBoxChanged()"> Zooming
+			  </label>
+			 </div>
+			</div>
 		<div id="time"></div>
 	  </div>
 	</nav>
