@@ -372,7 +372,7 @@
 		}
 		
 		function loadiframe(eventId){
-			document.getElementById("modaliframe").src="https://evfreefullerton.ccbchurch.com/event_detail.php?event_id="+events[j].id;
+			document.getElementById("modaliframe").src="https://evfreefullerton.ccbchurch.com/event_detail.php?event_id="+eventId;
 		}
 
 		function refreshList(){
