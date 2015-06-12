@@ -4,6 +4,7 @@ body
     height: 100%;
     padding-left: 0px;
     padding-right: 0px;
+    padding-bottom: 70px;
 }
 
 
@@ -79,16 +80,7 @@ ui-slider
 
 .DatePickerContainer
 {
-    min-width: 200px;
-    max-width: 300px;
-    margin: 10px;
-    padding-top: 5px;
-    padding-right: 5px;
-    padding-bottom: 5px;
-    padding-left: 5px;
-
-    text-align: center;
-    border-radius: 10px;
+    display: inline-block;
 }
 
 #datepicker
@@ -99,12 +91,7 @@ ui-slider
 .EventList
 {
     overflow-y: scroll;
-
-    min-width: 200px;
-    max-width: 300px;
     height: 500px;
-    margin: 10px;
-
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -155,7 +142,7 @@ ul
 
 #timeText
 {
-    font-size: 20px;
+    font-size: .9em;
 
     display: inline-block;
 }
@@ -267,10 +254,13 @@ ul
   }
 }
 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+    .EventList
+    {
+        height: 80%;
+    }
 
-
-@media (max-width: 767px)
-{
     #map-svg
     {
         width: 90% !important;
@@ -287,4 +277,15 @@ ul
     {
         width: 5em;
     }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { 
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) {
+
 }

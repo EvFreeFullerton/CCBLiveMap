@@ -26,26 +26,25 @@
     <div class="container">
       <div class="row row-offcanvas row-offcanvas-right">
     
-        <div class="col-xs-12 col-sm-9">
+        <div class="col-xs-12 col-sm-8">
           <p class="pull-right visible-xs">
 	            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle Events List</button>
 	          </p>
 				<object id="map-svg" class="img-responsive" type="image/svg+xml" data="Map.svg" onload="mapLoaded()"></object>
 			</div> <!-- /col-md-8 -->
 
-			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-				<div class="DatePickerContainer"><input type="text" id="datepicker" onchange="newDate()"></div>
+			<div class="col-xs-6 col-sm-4 sidebar-offcanvas" id="sidebar">
 				<div class="EventList" id="EventList"></div>
 			</div> <!-- /col-md-4 -->
 
 		</div> <!-- /row -->
 
-
+	<div id="mouseTooltip" >Event</div>
 
 	<nav class="navbar footer navbar-default navbar-fixed-bottom">
 	  <div class="container">
+		<div class="DatePickerContainer"><input type="text" id="datepicker" onchange="newDate()"></div>
 
-		<input type="text" id="datepicker" onchange="newDate()">
 		<div id="timeText">Time</div>
 		<select id='modeSelect' onchange="modeChange()">
 			<option value='live'>Live</option>
@@ -56,8 +55,6 @@
 	  </div>
 	</nav>
 	</div> <!-- .containter -->
-
-	<div id="mouseTooltip" >Event</div>
 
 	<script src="scripts/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
 	<script src="scripts/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
