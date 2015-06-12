@@ -68,6 +68,14 @@
 
 
 
+<div class="modal fade event-modal-lg" tabindex="-1" role="dialog" aria-labelledby="Event" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    	<iframe src="#" id="modaliframe" ></iframe>
+    </div>
+  </div>
+</div>
+
 	<script src="js/bootstrap.min.js"></script>
 	<script src="scripts/events.js"></script>
 	<script src="scripts/scripts.js"></script>
