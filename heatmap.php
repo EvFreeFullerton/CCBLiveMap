@@ -2,13 +2,12 @@
 <html lang="en">
 	<head>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimal-ui">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">	
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="scripts/jquery-ui-1.11.4.custom/jquery-ui.css">
-	<script src="scripts/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
-	<script src="scripts/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
-	<script src="scripts/jquery.ui.touch-punch.min.js"></script>
+
 
 
 <title>Campus Temperatures</title>
@@ -28,7 +27,11 @@
 	</div> <!-- end .wrap -->
 </div> <!-- end .container-fluid -->
 
-<script src="js/bootstrap.min.js"></script>
-<script src="scripts/heatmap.js"></script>
+	<script src="scripts/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+	<script src="scripts/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+	<script src="scripts/jquery.ui.touch-punch.min.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="scripts/heatmap.js"></script>
 </body>
 </html>
