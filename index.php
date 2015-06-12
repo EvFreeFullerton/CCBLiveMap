@@ -39,7 +39,7 @@
 </div> <!-- .containter-fluid -->
 
 
-	<nav class="navbar navbar-default navbar-fixed-bottom">
+	<nav class="navbar footer navbar-default navbar-fixed-bottom">
 	  <div class="container">
 
 		<input type="text" id="datepicker" onchange="newDate()">
