@@ -35,5 +35,6 @@
 
 	<script src="js/bootstrap.min.js"></script>
 	<script src="scripts/wifi.js"></script>
+	<script src="scripts/scripts.js"></script>
 </body>
 </html>

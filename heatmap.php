@@ -33,5 +33,6 @@
 
 	<script src="js/bootstrap.min.js"></script>
 	<script src="scripts/heatmap.js"></script>
+	<script src="scripts/scripts.js"></script>
 </body>
 </html>
