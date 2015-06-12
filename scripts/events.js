@@ -384,7 +384,7 @@
 			
 			for(var j=0;j<events.length;j++)
 			{
-				var newItemHTML = "<div class='Event' id='"+events[j].id+"'><div class='EventTitle'><b>"+events[j].name+"</b><br>"+(new Date( Number(temp)+ Number(events[j].startTime)*1000)).toLocaleTimeString()+" to "+(new Date( Number(temp)+ Number(events[j].endTime)*1000)).toLocaleTimeString()+"</div><div class='EventDescription'>"+events[j].description+"</div></div>";
+				var newItemHTML = "<div class='Event' id='"+events[j].id+"'><div class='EventTitle'><b><a href='https://evfreefullerton.ccbchurch.com/event_detail.php?event_id="+events[j].id+"' >"+events[j].name+"</a></b><br>"+(new Date( Number(temp)+ Number(events[j].startTime)*1000)).toLocaleTimeString()+" to "+(new Date( Number(temp)+ Number(events[j].endTime)*1000)).toLocaleTimeString()+"</div><div class='EventDescription'>"+events[j].description+"</div></div>";
 				newHTML = newHTML + newItemHTML;
 			}
 			
