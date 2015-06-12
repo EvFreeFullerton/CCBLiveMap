@@ -1,69 +1,206 @@
+html,
+body
+{
+    height: 100%;
+}
+
+#wrap
+{
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+input[type=checkbox]
+{
+    padding-left: 20px;
+    -webkit-transform: scale(2);
+       -moz-transform: scale(2);
+        -ms-transform: scale(2);
+         -o-transform: scale(2);
+}
+
+#time .ui-slider-handle
+{
+    width: 45px;
+    height: 45px;
+}
+
+.Map
+{
+    margin: 10px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+
+    border: 2px solid #8ac007;
+    /* flex-grow:3; */
+    border-radius: 10px;
+}
+
+.DatePickerContainer
+{
+    min-width: 200px;
+    max-width: 300px;
+    margin: 10px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+
+    text-align: center;
+
+    border: 2px solid #8ac007;
+    border-radius: 10px;
+}
+
+#datepicker
+{
+    max-width: 100px;
+}
+
+.EventList
+{
+    overflow-y: scroll;
+
+    min-width: 200px;
+    max-width: 300px;
+    height: 500px;
+    margin: 10px;
+
+    border: 2px solid #8ac007;
+    border-radius: 10px;
+}
+
+.Event
+{
+    margin: 3px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+
+    transition: background-color .5s ease;
+
+    color: #fff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background: #000;
+}
+
+.zooming
+{
+    display: inline-block;
+
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 10px;
+}
+
+#zoomCheckBox
+{
+    margin-top: 0;
+    margin-right: 10px;
+    padding-top: 0;
+    padding-left: 10px;
+
+    text-align: top;
+}
 /* Horizontal Menu Scheme */
-ul {
-    list-style-type: none;
+
+ul
+{
     margin: 0;
     padding: 0;
+
+    list-style-type: none;
 }
 
-#timeText{
-	font-size: 20px;
-	display: inline-block;
+#timeText
+{
+    font-size: 20px;
+
+    display: inline-block;
 }
 
-#map-svg{
-	max-width: 700px;
-	width: 100%;
+#map-svg
+{
+    width: 100%;
+    max-width: 700px;
 }
 
-#modeSelect{
-	display: inline-block;
-   width: 100px !important;
+#modeSelect
+{
+    display: inline-block;
+
+    width: 100px !important;
 }
 
-
-#wifimouseTooltip {
-	pointer-events: none;
-	opacity: 0;
-    background: lightgrey;
-    border:solid gray;
+#wifimouseTooltip
+{
     position: absolute;
+    z-index: 10;
+
     max-width: 8em;
-    text-align:center;
-		transition: opacity .5s;
-		z-index: 10;
+
+    transition: opacity .5s;
+    text-align: center;
+    pointer-events: none;
+
+    opacity: 0;
+    border: solid gray;
+    background: lightgrey;
 }
 
-		#mouseTooltip {
-			pointer-events: none;
-			opacity: 0;
-			background: lightgrey;
-			border:solid gray;
-			position: absolute;
-			max-width: 20em;
-			text-align:center;
-			transition: opacity .5s;
-			z-index: 10;
-		}
+#mouseTooltip
+{
+    position: absolute;
+    z-index: 10;
 
-		#time{
-			width: 100%;
-			margin: 0px;
-		}
-		#time .ui-slider-range { background: #729fcf; }
-		#time .ui-slider-handle { border-color: #729fcf; }
+    max-width: 20em;
 
-@media (max-width: 767px) {
-			#map-svg{
-				margin-top: 0px !important;
-				padding-top: 0px !important;
-				max-width: 100% !important;
-				width: 90% !important;
-				height: 90% !important;
-			}
-			#timeText{
-				font-size: .8em;
-			}
+    transition: opacity .5s;
+    text-align: center;
+    pointer-events: none;
 
-			select { width: 5em }
+    opacity: 0;
+    border: solid gray;
+    background: lightgrey;
 }
+
+#time
+{
+    width: 100%;
+    margin: 0;
+}
+
+#time .ui-slider-range
+{
+    background: #729fcf;
+}
+
+#time .ui-slider-handle
+{
+    border-color: #729fcf;
+}
+
+@media (max-width: 767px)
+{
+    #map-svg
+    {
+        width: 90% !important;
+        max-width: 100% !important;
+        height: 90% !important;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+    #timeText
+    {
+        font-size: .8em;
+    }
+    select
+    {
+        width: 5em;
+    }
 }

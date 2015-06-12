@@ -1,19 +1,22 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="#">Live Map</a>
-      <div class="nav-collapse collapse">
-        <ul class="nav">
-					<li><a href="index.php" class="navitem">Event Map</a></li>
-					<li><a href="heatmap.php" class="navitem">AC Heat Map</a></li>
-					<li><a href="wifi.php" class="navitem">WiFi Usage Map</a></li>
-        </ul>
-      </div>
+      <a class="navbar-brand" href="#">Live Map</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav nav-pills">
+        <li><a href="index.php" class="navitem">Event Map</a></li>
+        <li><a href="heatmap.php" class="navitem">AC Heat Map</a></li>
+        <li><a href="wifi.php" class="navitem">WiFi Usage Map</a></li>
+      </ul>
     </div>
   </div>
-</div>
+</nav>
