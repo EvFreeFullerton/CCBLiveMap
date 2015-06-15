@@ -71,7 +71,7 @@
 <div class="modal fade event-modal-lg" tabindex="-1" role="dialog" aria-labelledby="Event" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-    	<iframe src="#" id="modaliframe" width="600" height="500"></iframe>
+    	<iframe src="#" id="modaliframe" width="100%" height="500"></iframe>
     </div>
   </div>
 </div>
