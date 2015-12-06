@@ -323,17 +323,6 @@
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4565"
-       id="radialGradient4571-3-6-17"
-       cx="1039.2341"
-       cy="483.72894"
-       fx="1039.2341"
-       fy="483.72894"
-       r="36.144066"
-       gradientTransform="matrix(0.55732705,0,0,0.52899826,-349.99355,744.04175)"
-       gradientUnits="userSpaceOnUse" />
-    <radialGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4565"
        id="radialGradient4571-3-6-36"
        cx="1039.2341"
        cy="483.72894"
@@ -441,6 +430,28 @@
        r="36.144066"
        gradientTransform="matrix(0.55732705,0,0,0.52899826,573.18492,124.9573)"
        gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4565"
+       id="radialGradient3871"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.55732705,0,0,0.52899826,-106.52832,300.87821)"
+       cx="1039.2341"
+       cy="483.72894"
+       fx="1039.2341"
+       fy="483.72894"
+       r="36.144066" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4565"
+       id="radialGradient3879"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.55732705,0,0,0.52899826,-27.036154,116.64344)"
+       cx="1039.2341"
+       cy="483.72894"
+       fx="1039.2341"
+       fy="483.72894"
+       r="36.144066" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -449,16 +460,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2"
-     inkscape:cx="970.2608"
-     inkscape:cy="593.28235"
+     inkscape:zoom="2.1385758"
+     inkscape:cx="355.29647"
+     inkscape:cy="528.81793"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1280"
-     inkscape:window-height="738"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-height="751"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-text-baseline="false"
      units="px"
@@ -2921,26 +2932,6 @@
          x="397.30957"
          y="938.9704">25</tspan></text>
     <ellipse
-       style="display:inline;fill:url(#radialGradient4571-3-6-17);fill-opacity:1;stroke:none;enable-background:new"
-       id="AP24Color"
-       cx="229.19971"
-       cy="999.93353"
-       rx="20.144066"
-       ry="19.120148"
-       inkscape:label="#path4555-3-7" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
-       x="229.0752"
-       y="1005.4999"
-       id="AP24txt"
-       sodipodi:linespacing="125%"
-       inkscape:label="#text3638"><tspan
-         sodipodi:role="line"
-         id="tspan3640-7-84"
-         x="229.0752"
-         y="1005.4999">24</tspan></text>
-    <ellipse
        style="display:inline;fill:url(#radialGradient4571-3-6-36);fill-opacity:1;stroke:none;enable-background:new"
        id="AP23Color"
        cx="228.19971"
@@ -3197,5 +3188,45 @@
        x="1098.8956"
        y="366.58081"
        inkscape:label="#rect4470-0" />
+    <ellipse
+       inkscape:label="#path4555-3-7"
+       ry="19.120148"
+       rx="20.144066"
+       cy="556.77002"
+       cx="472.66498"
+       id="AP38Color"
+       style="display:inline;fill:url(#radialGradient3871);fill-opacity:1;stroke:none;enable-background:new" />
+    <text
+       inkscape:label="#text3638"
+       sodipodi:linespacing="125%"
+       id="AP38txt"
+       y="561.9646"
+       x="471.96881"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
+       xml:space="preserve"><tspan
+         y="561.9646"
+         x="471.96881"
+         id="tspan3867"
+         sodipodi:role="line">38</tspan></text>
+    <ellipse
+       style="display:inline;fill:url(#radialGradient3879);fill-opacity:1;stroke:none;enable-background:new"
+       id="AP39Color"
+       cx="552.1571"
+       cy="372.53522"
+       rx="20.144066"
+       ry="19.120148"
+       inkscape:label="#path4555-3-7" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;enable-background:new"
+       x="551.46094"
+       y="377.7298"
+       id="AP39txt"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3638"><tspan
+         sodipodi:role="line"
+         id="tspan3877"
+         x="551.46094"
+         y="377.7298">39</tspan></text>
   </g>
 </svg>
